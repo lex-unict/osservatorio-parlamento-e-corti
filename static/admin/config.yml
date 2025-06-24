@@ -2,26 +2,24 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/images"
-public_folder: "/images"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 locale: 'it'
 
 collections:
   - name: "primo-piano"
-    label: "In Primo Piano"
+    label: "Primo Piano"
     folder: "content/primo-piano"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Autore", name: "author", widget: "string"}
-      - {label: "Didascalia", name: "description", widget: "text"}
-      - {label: "Immagine", name: "image", widget: "image"}
-      - {label: "PDF", name: "pdf", widget: "file"}
-      - {label: "Contenuto", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", default: ["primo-piano"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "parlamento"
     label: "Parlamento"
@@ -29,13 +27,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Didascalia", name: "description", widget: "text"}
-      - {label: "Immagine", name: "image", widget: "image"}
-      - {label: "PDF", name: "pdf", widget: "file"}
-      - {label: "Contenuto", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", default: ["parlamento"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "corti"
     label: "Corti"
@@ -43,13 +40,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Didascalia", name: "description", widget: "text"}
-      - {label: "Immagine", name: "image", widget: "image"}
-      - {label: "PDF", name: "pdf", widget: "file"}
-      - {label: "Contenuto", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", default: ["corti"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "news"
     label: "News"
@@ -57,12 +53,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Immagine", name: "image", widget: "image"}
-      - {label: "PDF", name: "pdf", widget: "file"}
-      - {label: "Contenuto", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list", default: ["news"]}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featured_image", widget: "image"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pagine"
