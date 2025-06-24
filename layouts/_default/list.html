@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="subtitle">{{ . }}</p>
+    {{ end }}
+    
+    {{ .Content }}
+
+    {{ if .Pages }}
+    <div class="articles">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="article">
+        <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <div class="article-meta">
+          <time>{{ .Date.Format "02/01/2006" }}</time>
+          {{ with .Params.categories }}
+          · {{ range . }}
+          <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+        {{ with .Description }}
+        <p class="article-description">{{ . }}</p>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }} 

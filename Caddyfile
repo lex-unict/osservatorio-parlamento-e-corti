@@ -1,10 +1,20 @@
 :80 {
-    root * /usr/share/caddy
-    file_server
+    reverse_proxy hugo:1313
     encode gzip
-    
-    handle_errors {
-        rewrite * /{http.error.status_code}.html
-        file_server
+    header {
+        # Enable HSTS
+        Strict-Transport-Security "max-age=31536000;"
+        # Disable FLoC tracking
+        Permissions-Policy "interest-cohort=()"
+        # Modern CSP
+        Content-Security-Policy "default-src 'self' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://identity.netlify.com https://unpkg.com; img-src 'self' data: blob: https://unpkg.com; media-src 'self' data: blob:; connect-src 'self' https://api.netlify.com https://identity.netlify.com;"
+        # Prevent clickjacking
+        X-Frame-Options "DENY"
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        # Enable XSS filtering
+        X-XSS-Protection "1; mode=block"
+        # Control referrer information
+        Referrer-Policy "same-origin"
     }
 } 
