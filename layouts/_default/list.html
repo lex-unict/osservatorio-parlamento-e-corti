@@ -1,33 +1,140 @@
 {{ define "main" }}
-<section class="section">
+<div class="section-container">
   <div class="container">
-    <h1 class="title">{{ .Title }}</h1>
+    <h1 class="section-title">{{ .Title }}</h1>
     {{ with .Description }}
-    <p class="subtitle">{{ . }}</p>
+    <p class="section-description">{{ . }}</p>
     {{ end }}
     
     {{ .Content }}
 
     {{ if .Pages }}
-    <div class="articles">
+    <div class="articles-grid">
       {{ range .Pages.ByDate.Reverse }}
-      <article class="article">
-        <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <div class="article-meta">
-          <time>{{ .Date.Format "02/01/2006" }}</time>
-          {{ with .Params.categories }}
-          · {{ range . }}
-          <a href="/categories/{{ . | urlize }}">{{ . }}</a>
-          {{ end }}
-          {{ end }}
+      <article class="article-card">
+        {{ if .Params.featured_image }}
+        <div class="article-image">
+          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
         </div>
-        {{ with .Description }}
-        <p class="article-description">{{ . }}</p>
         {{ end }}
+        <div class="article-content">
+          <div class="article-category">{{ .Section | upper }}</div>
+          <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}
+          <p class="article-description">{{ . }}</p>
+          {{ end }}
+          <div class="article-meta">
+            <time>{{ .Date.Format "02/01/2006" }}</time>
+            {{ with .Params.author }}
+            · {{ . }}
+            {{ end }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="read-more">Approfondisci</a>
+        </div>
       </article>
       {{ end }}
     </div>
     {{ end }}
   </div>
-</section>
+</div>
+
+<style>
+.section-container {
+  padding: 2rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.article-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.article-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 1.5rem;
+}
+
+.article-category {
+  color: #0056b3;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.article-title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.article-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-title a:hover {
+  color: #0056b3;
+}
+
+.article-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.article-meta {
+  color: #888;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+</style>
 {{ end }} 

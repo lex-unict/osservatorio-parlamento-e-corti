@@ -1,14 +1,25 @@
 ---
-title: "La Riforma della Giustizia: Analisi e Prospettive"
-date: 2024-03-20T09:00:00+01:00
-author: "Prof. Giuseppe Rossi"
-description: "Un'analisi approfondita delle recenti proposte di riforma del sistema giudiziario italiano, con particolare attenzione agli impatti sul processo penale e civile."
-image: "/images/placeholder.svg"
-pdf: "/sample.pdf"
-tags: ["primo-piano", "giustizia", "riforme"]
+title: "Riforma della Giustizia: Approvato il Nuovo Pacchetto di Misure"
+date: 2024-03-20
+description: "Il Parlamento approva la riforma del sistema giudiziario: digitalizzazione, efficienza e garanzie processuali."
+featured_image: "/images/featured/justice.jpg"
+categories: ["Giustizia", "Riforme"]
 ---
 
-La recente proposta di riforma del sistema giudiziario italiano rappresenta un tentativo ambizioso di modernizzare e rendere più efficiente l'amministrazione della giustizia nel nostro paese. Questo articolo si propone di analizzare i punti principali della riforma e le sue possibili implicazioni per il futuro della giustizia italiana.
+# Riforma della Giustizia: Analisi delle Nuove Proposte
+
+Un'analisi approfondita delle recenti proposte di riforma del sistema giudiziario italiano, con particolare attenzione agli impatti sulla durata dei processi e sull'efficienza del sistema.
+
+## Punti Chiave della Riforma
+
+- Digitalizzazione dei processi
+- Riduzione dei tempi processuali
+- Riorganizzazione degli uffici giudiziari
+- Nuove procedure di mediazione
+
+## Impatti Attesi
+
+La riforma mira a ridurre significativamente i tempi della giustizia, con un obiettivo di diminuzione del 40% della durata media dei processi civili e del 25% per quelli penali.
 
 ## I Punti Chiave della Riforma
 

@@ -1,60 +1,359 @@
 {{ define "main" }}
-<div class="home-content">
-    <!-- In Primo Piano -->
-    <section class="primo-piano">
-        <h2>IN PRIMO PIANO</h2>
-        {{ $primoPiano := where .Site.RegularPages "Section" "primo-piano" }}
-        {{ with index ($primoPiano.ByDate.Reverse) 0 }}
-        <div class="featured-article">
-            <div class="featured-image">
-                {{ with .Params.image }}
-                <img src="{{ . }}" alt="{{ $.Title }}">
-                {{ end }}
-            </div>
-            <div class="featured-content">
-                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                <div class="article-meta">
-                    <span class="author">{{ .Params.author }}</span>
-                </div>
-                <div class="description">{{ .Params.description }}</div>
-                <div class="excerpt">{{ .Summary }}</div>
-            </div>
+<div class="home-container">
+  <!-- Project Description -->
+  <section class="project-description">
+    <div class="container">
+      <p class="lead">L'<strong>Osservatorio su Parlamento e Corti</strong> è un progetto di ricerca dell'Università di Catania che si propone di monitorare e analizzare l'attività parlamentare e giurisprudenziale in Italia, con particolare attenzione alle interazioni tra potere legislativo e giudiziario.</p>
+    </div>
+  </section>
+
+  <!-- Featured Section - Single Most Recent -->
+  <section class="featured-section pattern-bg-1">
+    <div class="container">
+      <h2 class="section-title">In Primo Piano</h2>
+      {{ range first 1 (where .Site.RegularPages "Section" "primo-piano") }}
+      <article class="featured-card">
+        <div class="featured-content">
+          <div class="featured-category">IN PRIMO PIANO</div>
+          <h3 class="featured-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with .Params.author }}
+          <div class="featured-author">{{ . }}</div>
+          {{ end }}
+          {{ with .Description }}
+          <p class="featured-description">{{ . }}</p>
+          {{ end }}
+          <div class="featured-excerpt">
+            {{ .Summary }}
+          </div>
+          {{ if .Params.featured_image }}
+          <div class="featured-image">
+            <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+          </div>
+          {{ end }}
+          <a href="{{ .RelPermalink }}" class="read-more">Approfondisci</a>
         </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Parliament Section - 3 rows of 4 -->
+  <section class="parliament-section pattern-bg-2">
+    <div class="container">
+      <h2 class="section-title">Parlamento</h2>
+      <div class="grid-4x3">
+        {{ range first 12 (where .Site.RegularPages "Section" "parlamento") }}
+        <article class="grid-card">
+          <div class="card-content">
+            {{ if not .Params.featured_image }}
+            <div class="default-icon">
+              <img src="/images/writing-icon.svg" alt="Writing Icon">
+            </div>
+            {{ end }}
+            <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Description }}
+            <p class="card-description">{{ . }}</p>
+            {{ end }}
+          </div>
+        </article>
         {{ end }}
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Parlamento -->
-    <section class="parlamento">
-        <h2>PARLAMENTO</h2>
-        <div class="grid-container">
-            {{ $parlamento := where .Site.RegularPages "Section" "parlamento" }}
-            {{ range first 12 $parlamento.ByDate.Reverse }}
-            <div class="grid-item">
-                <div class="item-icon">
-                    <img src="/images/writing-icon.svg" alt="Writing Icon">
-                </div>
-                <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-                <div class="description">{{ .Params.description }}</div>
+  <!-- Courts Section - 2 rows of 4 -->
+  <section class="courts-section">
+    <div class="container">
+      <h2 class="section-title">Corti</h2>
+      <div class="grid-4x2">
+        {{ range first 8 (where .Site.RegularPages "Section" "corti") }}
+        <article class="grid-card">
+          <div class="card-content">
+            {{ if not .Params.featured_image }}
+            <div class="default-icon">
+              <img src="/images/justice-icon.svg" alt="Justice Icon">
             </div>
             {{ end }}
-        </div>
-    </section>
-
-    <!-- Corti -->
-    <section class="corti">
-        <h2>CORTI</h2>
-        <div class="grid-container">
-            {{ $corti := where .Site.RegularPages "Section" "corti" }}
-            {{ range first 8 $corti.ByDate.Reverse }}
-            <div class="grid-item">
-                <div class="item-icon">
-                    <img src="/images/justice-icon.svg" alt="Justice Icon">
-                </div>
-                <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-                <div class="description">{{ .Params.description }}</div>
-            </div>
+            <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Description }}
+            <p class="card-description">{{ . }}</p>
             {{ end }}
-        </div>
-    </section>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </section>
 </div>
+
+<style>
+.home-container {
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-description {
+  background-color: #fff;
+  padding: 2rem 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-description .lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0056b3;
+  display: inline-block;
+}
+
+/* Background Patterns */
+.pattern-bg-1 {
+  background-color: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e9ecef' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-bg-2 {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8f9fa' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Featured Section */
+.featured-section {
+  padding: 2rem 0;
+}
+
+.featured-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.featured-category {
+  color: #0056b3;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.featured-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.featured-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.featured-title a:hover {
+  color: #0056b3;
+}
+
+.featured-author {
+  color: #666;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.featured-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.featured-excerpt {
+  color: #333;
+  font-size: 1rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.featured-image {
+  margin: 1.5rem 0;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Grid Sections */
+.parliament-section,
+.courts-section {
+  padding: 2rem 0;
+  background: #fff;
+}
+
+.grid-4x3,
+.grid-4x2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.grid-4x3 {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-4x2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.default-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.default-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.card-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: #0056b3;
+}
+
+.card-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Contacts Section */
+.contacts-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-logo {
+  width: 200px;
+}
+
+.contact-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.contact-column h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-column p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 1200px) {
+  .grid-4x3,
+  .grid-4x2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-4x3,
+  .grid-4x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-logo {
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .featured-title {
+    font-size: 1.5rem;
+  }
+
+  .grid-4x3,
+  .grid-4x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 {{ end }} 

@@ -1,13 +1,25 @@
 ---
-title: "Analisi della Legge di Bilancio 2024"
-date: 2024-03-19T10:00:00+01:00
-description: "Un'analisi dettagliata delle principali misure contenute nella Legge di Bilancio 2024 e del loro impatto sul sistema economico italiano."
-image: "/images/placeholder.svg"
-pdf: "/sample.pdf"
-tags: ["parlamento", "economia", "legge-bilancio"]
+title: "Legge di Bilancio 2024: Le Principali Novità"
+date: 2024-03-19
+description: "Analisi dettagliata delle principali misure contenute nella Legge di Bilancio 2024, con focus su riforme fiscali e investimenti pubblici."
+categories: ["Parlamento", "Finanza Pubblica"]
 ---
 
-La Legge di Bilancio 2024 introduce importanti novità nel panorama economico e fiscale italiano. Questo articolo analizza le principali misure e il loro impatto sul sistema paese.
+# Legge di Bilancio 2024: Le Principali Novità
+
+La nuova Legge di Bilancio introduce importanti novità in materia di:
+
+- Riforma fiscale
+- Investimenti in infrastrutture
+- Sostegno alle imprese
+- Politiche sociali
+
+## Impatto sulle Finanze Pubbliche
+
+Le misure previste comportano un impegno finanziario complessivo di 24 miliardi di euro, di cui:
+- 12 miliardi per la riforma fiscale
+- 8 miliardi per investimenti
+- 4 miliardi per politiche sociali
 
 ## Principali Misure
 

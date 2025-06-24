@@ -14,7 +14,7 @@
     <header>
         <div class="logo-container">
             <a href="/">
-                <img src="/images/logo.svg" alt="{{ .Site.Title }}" class="logo">
+                <img src="/images/logo.png" alt="{{ .Site.Title }}" class="logo">
             </a>
         </div>
         
@@ -27,12 +27,12 @@
 
     <main>
         {{ block "main" . }}{{ end }}
-    </main>
 
-    <aside class="sidebar">
-        {{ partial "newsletter.html" . }}
-        {{ partial "recent-news.html" . }}
-    </aside>
+        <aside class="sidebar">
+            {{ partial "newsletter.html" . }}
+            {{ partial "recent-news.html" . }}
+        </aside>
+    </main>
 
     <footer>
         <div class="contact-section">

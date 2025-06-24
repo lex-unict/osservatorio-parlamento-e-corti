@@ -1,13 +1,28 @@
 ---
-title: "Convegno: Le Nuove Frontiere del Diritto Costituzionale"
-date: 2024-03-17T11:00:00+01:00
-image: "/images/placeholder.svg"
-pdf: "/sample.pdf"
-tags: ["news", "eventi", "convegni"]
+title: "Convegno Internazionale sul Diritto Amministrativo Europeo"
+date: 2024-03-17
+description: "Il 15 aprile 2024 si terrà a Roma un importante convegno internazionale sul diritto amministrativo europeo, con la partecipazione di illustri giuristi da tutta Europa."
+categories: ["Eventi", "Diritto Amministrativo"]
 ---
 
-Il Dipartimento di Giurisprudenza dell'Università di Catania organizza il convegno "Le Nuove Frontiere del Diritto Costituzionale", che si terrà il 15 aprile 2024 presso l'Aula Magna del Dipartimento.
+# Convegno Internazionale sul Diritto Amministrativo Europeo
 
-Il convegno vedrà la partecipazione di illustri relatori nazionali e internazionali che discuteranno delle sfide contemporanee del diritto costituzionale nell'era digitale.
+## Dettagli dell'Evento
 
-Per informazioni e iscrizioni: convegno@esempio.it 
+- Data: 15 aprile 2024
+- Luogo: Università La Sapienza, Roma
+- Orario: 9:30 - 18:00
+
+## Programma
+
+- 9:30 - Apertura dei lavori
+- 10:00 - Sessione mattutina: "L'evoluzione del diritto amministrativo nell'UE"
+- 14:30 - Sessione pomeridiana: "Sfide e prospettive future"
+- 17:30 - Conclusioni
+
+## Relatori
+
+Parteciperanno illustri giuristi da diverse università europee, tra cui:
+- Prof. Hans Mueller (Università di Berlino)
+- Prof.ssa Marie Dubois (Sorbona)
+- Prof. Giovanni Bianchi (Università di Roma) 

@@ -8,30 +8,34 @@ theme = "arcana"
   description = "Osservatorio su Parlamento e Corti dell'Università di Catania"
   copyright = "© Osservatorio su Parlamento e Corti. Tutti i diritti riservati."
   mainSections = ["primo-piano", "parlamento", "corti", "news"]
-  images = ["images/logo.svg"]
+  images = ["images/logo.png"]
   mailchimpURL = "https://example.us1.list-manage.com/subscribe/post?u=FAKE_U&amp;id=FAKE_ID"
 
 [menu]
   [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
     name = "Il Progetto"
     url = "/il-progetto/"
-    weight = 1
+    weight = 2
   [[menu.main]]
     name = "Redazione"
     url = "/redazione/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "News"
     url = "/news/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Archivio"
     url = "/archivio/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Link Utili"
     url = "/link-utili/"
-    weight = 5
+    weight = 6
 
 [taxonomies]
   tag = "tags"
