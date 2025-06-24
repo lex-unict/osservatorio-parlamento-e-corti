@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+  <!-- Background Rectangle -->
+  <rect x="0" y="0" width="400" height="100" fill="#1a4b8c"/>
+  
+  <!-- Stylized Parliament Building -->
+  <path fill="#f5f5f5" d="M150 80V40h100v40h-10V50h-10v30h-10V50h-10v30h-10V50h-10v30h-10V50h-10v30h-10z"/>
+  <path fill="#f5f5f5" d="M200 20l50 20H150l50-20z"/>
+  
+  <!-- Stylized Scale of Justice -->
+  <circle fill="#fff9e6" cx="280" cy="50" r="15"/>
+  <circle fill="#fff9e6" cx="320" cy="50" r="15"/>
+  <rect x="298" y="30" width="4" height="40" fill="#fff9e6"/>
+  
+  <!-- Text -->
+  <text x="20" y="45" fill="#f5f5f5" font-family="Arial" font-size="14">OSSERVATORIO SU</text>
+  <text x="20" y="65" fill="#f5f5f5" font-family="Arial" font-size="14">PARLAMENTO E CORTI</text>
+</svg> 

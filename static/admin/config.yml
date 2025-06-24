@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+locale: 'it'
+
+collections:
+  - name: "primo-piano"
+    label: "In Primo Piano"
+    folder: "content/primo-piano"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Autore", name: "author", widget: "string"}
+      - {label: "Didascalia", name: "description", widget: "text"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+      - {label: "Contenuto", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["primo-piano"]}
+
+  - name: "parlamento"
+    label: "Parlamento"
+    folder: "content/parlamento"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Didascalia", name: "description", widget: "text"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+      - {label: "Contenuto", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["parlamento"]}
+
+  - name: "corti"
+    label: "Corti"
+    folder: "content/corti"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Didascalia", name: "description", widget: "text"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+      - {label: "Contenuto", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["corti"]}
+
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Immagine", name: "image", widget: "image"}
+      - {label: "PDF", name: "pdf", widget: "file"}
+      - {label: "Contenuto", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list", default: ["news"]}
+
+  - name: "pages"
+    label: "Pagine"
+    files:
+      - name: "il-progetto"
+        label: "Il Progetto"
+        file: "content/il-progetto/_index.md"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Immagine", name: "image", widget: "image"}
+          - {label: "Contenuto", name: "body", widget: "markdown"}
+      
+      - name: "redazione"
+        label: "Redazione"
+        file: "content/redazione/_index.md"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Contenuto", name: "body", widget: "markdown"}
+      
+      - name: "link-utili"
+        label: "Link Utili"
+        file: "content/link-utili/_index.md"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - label: "Riviste Scientifiche"
+            name: "riviste"
+            widget: "list"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"}
+          - label: "Siti Istituzionali"
+            name: "istituzioni"
+            widget: "list"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+              - {label: "Logo", name: "logo", widget: "image"} 

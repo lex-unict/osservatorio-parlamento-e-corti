@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  hugo:
+    image: klakegg/hugo:ext-ubuntu
+    command: server --bind 0.0.0.0 --buildDrafts --buildFuture --disableFastRender
+    volumes:
+      - .:/src
+    ports:
+      - "1313:1313"
+    environment:
+      - HUGO_ENVIRONMENT=development
+      - HUGO_ENV=development
+
+  caddy:
+    image: caddy:2
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./public:/usr/share/caddy
+    ports:
+      - "8080:80"
+    depends_on:
+      - hugo 

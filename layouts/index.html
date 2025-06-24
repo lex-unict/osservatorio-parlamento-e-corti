@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="home-content">
+    <!-- In Primo Piano -->
+    <section class="primo-piano">
+        <h2>IN PRIMO PIANO</h2>
+        {{ $primoPiano := where .Site.RegularPages "Section" "primo-piano" }}
+        {{ with index ($primoPiano.ByDate.Reverse) 0 }}
+        <div class="featured-article">
+            <div class="featured-image">
+                {{ with .Params.image }}
+                <img src="{{ . }}" alt="{{ $.Title }}">
+                {{ end }}
+            </div>
+            <div class="featured-content">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <div class="article-meta">
+                    <span class="author">{{ .Params.author }}</span>
+                </div>
+                <div class="description">{{ .Params.description }}</div>
+                <div class="excerpt">{{ .Summary }}</div>
+            </div>
+        </div>
+        {{ end }}
+    </section>
+
+    <!-- Parlamento -->
+    <section class="parlamento">
+        <h2>PARLAMENTO</h2>
+        <div class="grid-container">
+            {{ $parlamento := where .Site.RegularPages "Section" "parlamento" }}
+            {{ range first 12 $parlamento.ByDate.Reverse }}
+            <div class="grid-item">
+                <div class="item-icon">
+                    <img src="/images/writing-icon.svg" alt="Writing Icon">
+                </div>
+                <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                <div class="description">{{ .Params.description }}</div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- Corti -->
+    <section class="corti">
+        <h2>CORTI</h2>
+        <div class="grid-container">
+            {{ $corti := where .Site.RegularPages "Section" "corti" }}
+            {{ range first 8 $corti.ByDate.Reverse }}
+            <div class="grid-item">
+                <div class="item-icon">
+                    <img src="/images/justice-icon.svg" alt="Justice Icon">
+                </div>
+                <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                <div class="description">{{ .Params.description }}</div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</div>
+{{ end }} 

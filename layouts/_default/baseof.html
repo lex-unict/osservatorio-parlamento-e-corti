@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="/css/custom.css">
+    {{ if .Site.Params.mailchimpURL }}
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/FAKE_U/FAKE_ID.js");</script>
+    {{ end }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/">
+                <img src="/images/logo.svg" alt="{{ .Site.Title }}" class="logo">
+            </a>
+        </div>
+        
+        <nav class="main-nav">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+            {{ end }}
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <aside class="sidebar">
+        {{ partial "newsletter.html" . }}
+        {{ partial "recent-news.html" . }}
+    </aside>
+
+    <footer>
+        <div class="contact-section">
+            <div class="contact-logo">
+                <img src="/images/contact-logo.svg" alt="Logo" class="clickable-logo">
+            </div>
+            <div class="contact-columns">
+                <div class="contact-column">
+                    <h4>Contatti</h4>
+                    <p>Università di Catania<br>
+                    Dipartimento di Giurisprudenza<br>
+                    Via Esempio, 123<br>
+                    95100 Catania</p>
+                </div>
+                <div class="contact-column">
+                    <h4>Orari</h4>
+                    <p>Lunedì - Venerdì<br>
+                    9:00 - 18:00</p>
+                </div>
+                <div class="contact-column">
+                    <h4>Social</h4>
+                    <p>Email: info@esempio.it<br>
+                    Tel: +39 123 456789</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            {{ .Site.Params.copyright }}
+        </div>
+    </footer>
+
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

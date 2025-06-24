@@ -1,0 +1,10 @@
+<div class="news-box">
+    <h3>News</h3>
+    {{ $news := where .Site.RegularPages "Section" "news" }}
+    {{ range first 5 $news.ByDate.Reverse }}
+    <div class="news-item">
+        <span class="news-date">{{ .Date.Format "02/01/2006" }}</span>
+        <a href="{{ .RelPermalink }}" class="news-title">{{ .Title }}</a>
+    </div>
+    {{ end }}
+</div> 
