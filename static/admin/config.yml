@@ -16,12 +16,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featured_image", widget: "image"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Descrizione", name: "description", widget: "text"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Categorie", name: "categories", widget: "list"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
 
   - name: "parlamento"
     label: "Parlamento"
@@ -29,12 +29,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featured_image", widget: "image"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Descrizione", name: "description", widget: "text"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Categorie", name: "categories", widget: "list"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
 
   - name: "corti"
     label: "Corti"
@@ -42,12 +42,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featured_image", widget: "image"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Descrizione", name: "description", widget: "text"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Categorie", name: "categories", widget: "list"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
 
   - name: "news"
     label: "News"
@@ -55,12 +55,12 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featured_image", widget: "image"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Descrizione", name: "description", widget: "text"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Categorie", name: "categories", widget: "list"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
 
   - name: "pages"
     label: "Pagine"
