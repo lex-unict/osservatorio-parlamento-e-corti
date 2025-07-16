@@ -8,6 +8,7 @@
     --soft-text-color: #666;
     --footer-link-color: #ccc;
     --title-color: #333;
+    --section-background-color: #f8f9fa;
 }
 
 /* Global Styles */
@@ -29,6 +30,12 @@ img {
 header {
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo-container {
