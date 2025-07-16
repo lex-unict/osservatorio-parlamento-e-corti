@@ -65,19 +65,12 @@ collections:
   - name: "pages"
     label: "Pagine"
     files:
-      - name: "il-progetto"
-        label: "Il Progetto"
-        file: "content/il-progetto/_index.md"
+      - name: "chi-siamo"
+        label: "Chi Siamo"
+        file: "content/chi-siamo/_index.md"
         fields:
           - {label: "Titolo", name: "title", widget: "string"}
           - {label: "Immagine", name: "image", widget: "image"}
-          - {label: "Contenuto", name: "body", widget: "markdown"}
-      
-      - name: "redazione"
-        label: "Redazione"
-        file: "content/redazione/_index.md"
-        fields:
-          - {label: "Titolo", name: "title", widget: "string"}
           - {label: "Contenuto", name: "body", widget: "markdown"}
       
       - name: "link-utili"
