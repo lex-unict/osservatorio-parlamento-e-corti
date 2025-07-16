@@ -23,9 +23,9 @@ collections:
       - {label: "Categorie", name: "categories", widget: "list"}
       - {label: "Corpo", name: "body", widget: "markdown"}
 
-  - name: "parlamento"
-    label: "Parlamento"
-    folder: "content/parlamento"
+  - name: "legislazione"
+    label: "Legislazione"
+    folder: "content/legislazione"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

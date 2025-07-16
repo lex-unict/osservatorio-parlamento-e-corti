@@ -11,6 +11,6 @@ Benvenuti nell'archivio dell'Osservatorio su Parlamento e Corti. Qui potete trov
 ## Categorie
 
 - [In Evidenza](/in-evidenza/) 
-- [Parlamento](/parlamento/)
+- [Legislazione](/legislazione/)
 - [Corti](/corti/)
 - [News](/news/) 
