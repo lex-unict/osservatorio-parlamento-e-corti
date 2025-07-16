@@ -32,6 +32,13 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.header-container {
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--background-color);
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -43,8 +50,9 @@ header {
     padding: 1rem 0;
 }
 
-.logo {
-    max-height: 100px;
+#main-logo {
+    height: 400px;
+    transition: height 0.05s ease-in-out;
 }
 
 .main-nav {

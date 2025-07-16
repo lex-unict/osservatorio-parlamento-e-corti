@@ -12,18 +12,73 @@
 </head>
 <body class="is-preload">
     <header>
-        <div class="logo-container">
-            <a href="/">
-                <img src="/images/logo.jpg" alt="{{ .Site.Title }}" class="logo">
-            </a>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="{{ .Site.Title }}" class="logo" id="main-logo">
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                {{ end }}
+            </nav>
         </div>
-        
-        <nav class="main-nav">
-            {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-            {{ end }}
-        </nav>
     </header>
+
+    <script>
+        (function () {
+            // width at maximum zoom out (i.e. when window has scrolled maxScrollDistance)
+            const heightAtMax = 100;
+
+            // distance over which zoom effect takes place
+            var initialMaxScrollDistance;
+
+            logoSize = function () {
+                // Get the real width of the logo image
+                var theLogo = document.getElementById("main-logo");
+                var newImage = new Image();
+                newImage.src = theLogo.src;
+                var imgHeight = newImage.height;
+
+                // set to window height if that is smaller
+                maxScrollDistance = Math.min(initialMaxScrollDistance, window.innerHeight);
+
+                // calculate diff and how many pixels to zoom per pixel scrolled
+                var heightDiff = imgHeight - heightAtMax;
+                var pixelsPerScroll = (heightDiff / maxScrollDistance);
+
+                const scrollHandler = function () {
+                    // the currently scrolled-to position - max-out at maxScrollDistance
+                    var scrollTopPos = Math.min(document.documentElement.scrollTop, maxScrollDistance);
+
+                    // how many pixels to adjust by
+                    var scrollChangePx =  Math.floor(scrollTopPos * pixelsPerScroll);
+
+                    // calculate the new width
+                    var zoomedHeight = imgHeight - scrollChangePx;
+
+                    // set the width
+                    theLogo.style.height = zoomedHeight + 'px';
+                }
+
+                window.addEventListener('scroll', scrollHandler);
+
+                scrollHandler();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const headerElement = document.querySelector('header');
+                const height = headerElement.offsetHeight;
+                headerElement.style.height = (height + 100) + 'px';
+                initialMaxScrollDistance = height;
+                const containerElement = document.querySelector('header .header-container');
+                containerElement.style.position = 'fixed';
+                logoSize();
+            });
+        })();
+    </script>
 
     <main>
         {{ block "main" . }}{{ end }}
