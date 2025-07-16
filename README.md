@@ -30,7 +30,7 @@ Sito web dell'Osservatorio su Parlamento e Corti dell'Università di Catania.
 ```
 .
 ├── content/               # Contenuti del sito
-│   ├── primo-piano/      # Articoli in primo piano
+│   ├── in-evidenza/      # Articoli in evidenza
 │   ├── parlamento/       # Articoli sul parlamento
 │   ├── corti/           # Articoli sulle corti
 │   ├── news/            # Notizie ed eventi

@@ -10,9 +10,9 @@ publish_mode: editorial_workflow
 locale: 'it'
 
 collections:
-  - name: "primo-piano"
-    label: "Primo Piano"
-    folder: "content/primo-piano"
+  - name: "in-evidenza"
+    label: "In Evidenza"
+    folder: "content/in-evidenza"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

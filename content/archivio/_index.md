@@ -10,7 +10,7 @@ Benvenuti nell'archivio dell'Osservatorio su Parlamento e Corti. Qui potete trov
 
 ## Categorie
 
-- [Primo Piano](/primo-piano/)
+- [In Evidenza](/in-evidenza/) 
 - [Parlamento](/parlamento/)
 - [Corti](/corti/)
 - [News](/news/) 

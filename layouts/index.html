@@ -3,11 +3,10 @@
   <!-- Featured Section - Single Most Recent -->
   <section class="featured-section pattern-bg-1">
     <div class="container">
-      <h2 class="section-title">In Primo Piano</h2>
-      {{ range first 1 (where .Site.RegularPages "Section" "primo-piano") }}
+      <h2 class="section-title">In Evidenza</h2>
+      {{ range first 1 (where .Site.RegularPages "Section" "in-evidenza") }}
       <article class="featured-card">
         <div class="featured-content">
-          <div class="featured-category">IN PRIMO PIANO</div>
           <h3 class="featured-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ with .Params.author }}
           <div class="featured-author">{{ . }}</div>

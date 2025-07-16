@@ -7,7 +7,7 @@ theme = "arcana"
 [params]
   description = "Osservatorio su Parlamento e Corti dell'Università di Catania"
   copyright = "© Osservatorio su Parlamento e Corti. Tutti i diritti riservati."
-  mainSections = ["primo-piano", "parlamento", "corti", "news"]
+  mainSections = ["in-evidenza", "parlamento", "corti", "news"]
   images = ["images/logo.jpg"]
   mailchimpURL = "https://example.us1.list-manage.com/subscribe/post?u=FAKE_U&amp;id=FAKE_ID"
 
