@@ -1,9 +1,13 @@
 :root {
-    --primary-blue: #1a4b8c;
+    --primary-blue: #234d77;
     --light-gray: #f5f5f5;
     --dark-gray: #333333;
     --light-yellow: #fff9e6;
+    --background-color: #4b4f5b;
     --text-color: #2c3e50;
+    --soft-text-color: #666;
+    --footer-link-color: #ccc;
+    --title-color: #333;
 }
 
 /* Global Styles */
@@ -11,6 +15,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
@@ -22,7 +27,6 @@ img {
 
 /* Header */
 header {
-    background-color: white;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -99,7 +103,7 @@ button {
 }
 
 .news-date {
-    color: #666;
+    color: var(--soft-text-color);
     font-size: 0.9rem;
 }
 
@@ -168,6 +172,17 @@ footer {
     gap: 2rem;
 }
 
+.contact-column a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+}
+
+.contact-column ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .contact-logo img {
     max-width: 150px;
 }
@@ -187,10 +202,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-    
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
