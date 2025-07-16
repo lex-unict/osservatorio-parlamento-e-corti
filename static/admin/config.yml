@@ -36,9 +36,9 @@ collections:
       - {label: "Categorie", name: "categories", widget: "list"}
       - {label: "Corpo", name: "body", widget: "markdown"}
 
-  - name: "corti"
-    label: "Corti"
-    folder: "content/corti"
+  - name: "giurisprudenza"
+    label: "Giurisprudenza"
+    folder: "content/giurisprudenza"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

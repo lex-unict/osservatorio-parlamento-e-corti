@@ -9,8 +9,8 @@ menu:
 Benvenuti nell'archivio dell'Osservatorio su Parlamento e Corti. Qui potete trovare tutti gli articoli pubblicati, organizzati per data e categoria.
 
 ## Categorie
-
+  
 - [In Evidenza](/in-evidenza/) 
 - [Legislazione](/legislazione/)
-- [Corti](/corti/)
+- [Giurisprudenza](/giurisprudenza/)
 - [News](/news/) 
