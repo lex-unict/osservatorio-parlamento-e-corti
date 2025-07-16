@@ -1,12 +1,12 @@
 baseURL = "/"
 languageCode = "it-it"
 defaultContentLanguage = "it"
-title = "Osservatorio su Parlamento e Corti"
+title = "Osservatorio su legislazione e giurisprudenza"
 theme = "arcana"
 
 [params]
-  description = "Osservatorio su Parlamento e Corti dell'Università di Catania"
-  copyright = "© Osservatorio su Parlamento e Corti. Tutti i diritti riservati."
+  description = "Osservatorio su legislazione e giurisprudenza dell'Università di Catania"
+  copyright = "© Osservatorio su legislazione e giurisprudenza. Tutti i diritti riservati."
   mainSections = ["in-evidenza", "legislazione", "giurisprudenza", "news"]
   images = ["images/logo.jpg"]
   mailchimpURL = "https://example.us1.list-manage.com/subscribe/post?u=FAKE_U&amp;id=FAKE_ID"

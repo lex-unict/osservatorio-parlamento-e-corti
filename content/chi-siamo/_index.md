@@ -3,7 +3,7 @@ title: "Chi siamo"
 image: "/images/placeholder.svg"
 ---
 
-L'Osservatorio su Parlamento e Corti è un progetto di ricerca del Dipartimento di Giurisprudenza dell'Università di Catania che si propone di monitorare e analizzare l'evoluzione del diritto attraverso l'attività parlamentare e giurisprudenziale.
+L'Osservatorio su legislazione e giurisprudenza è un progetto di ricerca del Dipartimento di Giurisprudenza dell'Università di Catania che si propone di monitorare e analizzare l'evoluzione del diritto attraverso l'attività parlamentare e giurisprudenziale.
 
 ## Direzione Scientifica
 

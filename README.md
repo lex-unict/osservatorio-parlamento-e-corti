@@ -1,6 +1,6 @@
-# Osservatorio su Parlamento e Corti
+# Osservatorio su legislazione e giurisprudenza
 
-Sito web dell'Osservatorio su Parlamento e Corti dell'Università di Catania.
+Sito web dell'Osservatorio su legislazione e giurisprudenza dell'Università di Catania.
 
 ## Requisiti
 
