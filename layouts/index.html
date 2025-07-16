@@ -7,22 +7,19 @@
       {{ range first 1 (where .Site.RegularPages "Section" "in-evidenza") }}
       <article class="featured-card">
         <div class="featured-content">
-          <h3 class="featured-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          {{ with .Params.author }}
-          <div class="featured-author">{{ . }}</div>
-          {{ end }}
-          {{ with .Description }}
-          <p class="featured-description">{{ . }}</p>
-          {{ end }}
-          <div class="featured-excerpt">
-            {{ .Summary }}
-          </div>
           {{ if .Params.featured_image }}
           <div class="featured-image">
             <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
           </div>
           {{ end }}
-          <a href="{{ .RelPermalink }}" class="read-more">Leggi</a>
+          <div class="featured-texts">
+            <h3 class="featured-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .Params.author }}
+            <div class="featured-author">{{ . }}</div>
+            {{ end }}
+            <p class="featured-description">{{ .Description }}</p>
+            <a href="{{ .RelPermalink }}" class="read-more btn">Leggi</a>
+          </div>
         </div>
       </article>
       {{ end }}
@@ -122,6 +119,12 @@
   padding: 2rem;
 }
 
+.featured-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
 .featured-category {
   color: #0056b3;
   font-size: 0.875rem;
@@ -166,13 +169,22 @@
 }
 
 .featured-image {
-  margin: 1.5rem 0;
+  flex: 1;
+}
+
+.featured-texts {
+  flex: 2;
 }
 
 .featured-image img {
   width: 100%;
   height: auto;
   border-radius: 4px;
+}
+
+.read-more {
+  margin-top: 1rem;
+  float: right;
 }
 
 /* Grid Sections */
@@ -300,14 +312,10 @@ main {
 }
 
 @media (max-width: 1200px) {
-  .grid-4x3,
-  .grid-4x2 {
-    grid-template-columns: repeat(3, 1fr);
+  main {
+    grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 992px) {
-  .grid-4x3,
   .grid-4x2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -327,20 +335,18 @@ main {
 }
 
 @media (max-width: 768px) {
-
-  main {
-    grid-template-columns: 1fr;
-  }
-  
   .container {
     padding: 0 1rem;
+  }
+
+  .featured-content {
+    flex-direction: column;
   }
 
   .featured-title {
     font-size: 1.5rem;
   }
 
-  .grid-4x3,
   .grid-4x2 {
     grid-template-columns: 1fr;
   }

@@ -93,13 +93,14 @@ input[type="email"] {
     border-radius: 4px;
 }
 
-button {
+button, .btn {
     background-color: var(--primary-blue);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* News Items */
