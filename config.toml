@@ -25,10 +25,6 @@ theme = "arcana"
     url = "/news/"
     weight = 4
   [[menu.main]]
-    name = "Archivio"
-    url = "/archivio/"
-    weight = 5
-  [[menu.main]]
     name = "Link Utili"
     url = "/link-utili/"
     weight = 6
