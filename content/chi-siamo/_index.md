@@ -1,77 +1,57 @@
 ---
-title: "Chi siamo"
-image: "/images/placeholder.svg"
+title: Chi siamo
+image: /images/placeholder.svg
 ---
+L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziativa del Progetto "***Emarginazione del Parlamento e crisi della democrazia rappresentativa***" (Em.Pa.Dem.), finanziato dall'Università degli studi di Catania  nell'ambito del “Piano di incentivi per la ricerca di Ateneo 2020-2022”  - linea di intervento 3.
 
-L'Osservatorio su legislazione e giurisprudenza è un progetto di ricerca del Dipartimento di Giurisprudenza dell'Università di Catania che si propone di monitorare e analizzare l'evoluzione del diritto attraverso l'attività parlamentare e giurisprudenziale.
+Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed analizzare  il concreto esercizio della funzione legislativa da parte del Parlamento nei rapporti con con altri soggetti istituzionali, ed in particolare con la Corte costituzionale.
 
-## Direzione Scientifica
 
-- **Prof. Mario Bianchi** - Direttore  
-  Professore Ordinario di Diritto Costituzionale  
-  Università di Catania
 
-- **Prof.ssa Laura Verdi** - Vice Direttore  
-  Professore Associato di Diritto Parlamentare  
-  Università di Catania
+# **L'OSSERVATORIO**
 
-## Comitato Scientifico
+## Direzione scientifica
 
-- Prof. Antonio Rossi  
-  Professore Ordinario di Diritto Pubblico  
-  Università di Roma
+**Prof. Giuseppe Chiara** 
+*Professore ordinario di Diritto costituzionale e pubblico*
+Università di Catania
 
-- Prof.ssa Maria Neri  
-  Professore Ordinario di Diritto Costituzionale  
-  Università di Milano
+## Coordinamento tecnico-scientifico
 
-- Prof. Giuseppe Bruno  
-  Professore Ordinario di Diritto Parlamentare  
-  Università di Napoli
+**Dott. Ignazio Spadaro** 
 
-## Il Nostro Team
+*Ricercatore di Diritto costituzionale e pubblico*
+Università di Catania
 
-### Redazione
-- Dott. Andrea Russo  
+## 
+Comitato di Redazione
+
+* Dott. Andrea Russo\
   Ricercatore in Diritto Costituzionale
-
-- Dott.ssa Sofia Ferrara  
+* Dott.ssa Sofia Ferrara\
   Assegnista di Ricerca
-
-- Dott. Marco Esposito  
+* Dott. Marco Esposito\
   Dottorando in Diritto Pubblico
 
-### Collaboratori
-- Dott.ssa Elena Romano  
-  Avvocato, Esperta in Diritto Costituzionale
 
-- Dott. Luca Moretti  
-  Funzionario Parlamentare
 
-- Dott.ssa Giulia Costa  
-  Magistrato
 
-## Obiettivi e Metodologia
 
-Il nostro osservatorio si pone i seguenti obiettivi:
 
-1. Monitorare l'attività legislativa del Parlamento italiano
-2. Analizzare le principali sentenze delle Corti superiori
-3. Studiare l'interazione tra potere legislativo e giudiziario
-4. Promuovere il dibattito scientifico su temi giuridici di attualità
+# **IL PROGETTO EM.PA.DEM.**
 
-Il nostro approccio si basa su:
+## Principal Investigator
 
-- Analisi sistematica delle fonti primarie
-- Studio comparato della giurisprudenza
-- Confronto con la dottrina nazionale e internazionale
-- Organizzazione di eventi e seminari di approfondimento
+Dott. Ignazio Spadaro 
 
-## Collaborazioni
 
-L'Osservatorio collabora attivamente con:
+## Direttori scientifici
 
-- Altre università italiane ed estere
-- Centri di ricerca
-- Istituzioni pubbliche
-- Ordini professionali 
+Prof. Emilio Castorina, Prof.ssa Adriana Ciancio, Prof. Giuseppe Chiara, Prof. Giancarlo A. Ferro
+
+(Università di Catania)
+
+
+## Altri membri del Gruppo di ricerca
+
+Prof. Samuele Gherardi (Universidad Complutense de Madrid), dott.ssa Alessia Fonzi (Università dell'Aquila), dott.ssa Nannerel Fiano (Università di Milano), dott. Antonello Lo Calzo (Università di Pisa), dott.ssa Chiara Sagone (Università di Catania), dott.ssa Ilaria De Cesare (Università di Pavia), dott. Vittorio Fazio (Università di Catania), dott. Paolo Inturri (Università di Catania)
