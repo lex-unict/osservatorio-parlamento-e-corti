@@ -6,8 +6,6 @@ L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziat
 
 Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed analizzare  il concreto esercizio della funzione legislativa da parte del Parlamento nei rapporti con con altri soggetti istituzionali, ed in particolare con la Corte costituzionale.
 
-
-
 # **L'OSSERVATORIO**
 
 ## Direzione scientifica
@@ -23,7 +21,6 @@ Università di Catania
 *Ricercatore di Diritto costituzionale e pubblico*
 Università di Catania
 
-## 
 Comitato di Redazione
 
 * Dott. Andrea Russo\
@@ -33,24 +30,17 @@ Comitato di Redazione
 * Dott. Marco Esposito\
   Dottorando in Diritto Pubblico
 
-
-
-
-
-
 # **IL PROGETTO EM.PA.DEM.**
 
 ## Principal Investigator
 
 Dott. Ignazio Spadaro 
 
-
 ## Direttori scientifici
 
 Prof. Emilio Castorina, Prof.ssa Adriana Ciancio, Prof. Giuseppe Chiara, Prof. Giancarlo A. Ferro
 
 (Università di Catania)
-
 
 ## Altri membri del Gruppo di ricerca
 
