@@ -1,6 +1,10 @@
 ---
 title: Chi siamo
 image: /images/placeholder.svg
+partners:
+  - title: Università di Catania
+    url: https://www.unict.it/
+    logo: https://www.unict.it/sites/all/themes/id_theme_unict/logo.svg
 ---
 L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziativa del Progetto "***Emarginazione del Parlamento e crisi della democrazia rappresentativa***" (Em.Pa.Dem.), finanziato dall'Università degli studi di Catania  nell'ambito del “Piano di incentivi per la ricerca di Ateneo 2020-2022”  - linea di intervento 3.
 
