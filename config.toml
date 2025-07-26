@@ -7,7 +7,7 @@ theme = "arcana"
 [params]
   description = "Osservatorio su legislazione e giurisprudenza dell'Università di Catania"
   copyright = "© Osservatorio su legislazione e giurisprudenza. Tutti i diritti riservati."
-  mainSections = ["in-evidenza", "legislazione", "giurisprudenza", "news"]
+  mainSections = ["legislazione", "giurisprudenza", "dottrina", "documentazione", "news"]
   images = ["images/logo.png"]
   mailchimpURL = "https://example.us1.list-manage.com/subscribe/post?u=FAKE_U&amp;id=FAKE_ID"
 

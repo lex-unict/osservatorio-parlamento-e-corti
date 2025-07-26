@@ -10,9 +10,22 @@ publish_mode: editorial_workflow
 locale: 'it'
 
 collections:
-  - name: "in-evidenza"
-    label: "In Evidenza"
-    folder: "content/in-evidenza"
+  - name: "dottrina"
+    label: "Dottrina"
+    folder: "content/dottrina"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Descrizione", name: "description", widget: "text"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Categorie", name: "categories", widget: "list"}
+      - {label: "Corpo", name: "body", widget: "markdown"}
+
+  - name: "documentazione"
+    label: "Documentazione"
+    folder: "content/documentazione"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:

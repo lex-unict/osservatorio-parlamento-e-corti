@@ -25,7 +25,7 @@
                                     {{ range $key, $value := .Site.Taxonomies.categories }}
                                     <label class="multiselect-item">
                                         <input type="checkbox" value="{{ $key }}" class="category-option"> 
-                                        <span>{{ $key }} ({{ len $value }})</span>
+                                        <span>{{ $key | humanize }} ({{ len $value }})</span>
                                     </label>
                                     {{ end }}
                                 </div>

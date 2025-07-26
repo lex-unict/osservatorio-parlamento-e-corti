@@ -3,8 +3,11 @@
   <!-- Featured Section - Single Most Recent -->
   <section class="featured-section pattern-bg-1">
     <div class="container">
+      {{ $dottrinaPages := where .Site.RegularPages "Section" "dottrina" }}
+      {{ $documentazionePages := where .Site.RegularPages "Section" "documentazione" }}
+      {{ $allPages := union $dottrinaPages $documentazionePages }}
       <h2 class="section-title"><a href="/in-evidenza">In Evidenza</a></h2>
-      {{ range first 1 (where .Site.RegularPages "Section" "in-evidenza") }}
+      {{ range first 1 (sort $allPages "Date" "desc") }}
       <article class="featured-card">
         <div class="featured-content">
           {{ if .Params.featured_image }}
