@@ -39,6 +39,7 @@ a, a:active {
 header {
     margin: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: contents;
 }
 
 h1, h2, h3, h4, h5, h6, .article-title {
@@ -64,9 +65,8 @@ h1, h2, h3, h4, h5, h6, .article-title {
 
 .header-container {
     width: 100%;
-    top: 0;
-    z-index: 1000;
     background-color: var(--background-color);
+    display: contents;
 }
 
 .container {
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, .article-title {
 }
 
 #main-logo {
-    height: 400px;
+    max-height: 400px;
     transition: height 0.05s ease-in-out;
     box-shadow: 20px 12px 56px 0px rgba(0, 0, 0, 1);
 }
@@ -91,6 +91,10 @@ h1, h2, h3, h4, h5, h6, .article-title {
     background-color: var(--primary-blue);
     padding: 1rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 .nav-link {
