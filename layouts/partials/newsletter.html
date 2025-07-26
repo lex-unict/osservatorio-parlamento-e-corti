@@ -1,11 +1,14 @@
 {{ if .Site.Params.mailchimpURL }}
 <div class="newsletter-box">
     <h3>Newsletter</h3>
-    <form action="{{ .Site.Params.mailchimpURL }}" method="post" target="_blank">
-        <div class="form-group">
-            <input type="email" name="EMAIL" placeholder="Il tuo indirizzo email" required>
-            <button type="submit">Iscriviti</button>
-        </div>
-    </form>
+    <p>Iscriviti per ricevere aggiornamenti su legislazione, giurisprudenza e novità del settore.</p>
+    <a class="read-more btn" href="/newsletter/">Iscriviti</a>
 </div>
-{{ end }} 
+<style>
+    .newsletter-box::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+</style>
+{{ end }}
