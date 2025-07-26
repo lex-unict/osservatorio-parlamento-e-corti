@@ -11,4 +11,4 @@ categories:
   - Unione Europea
   - ""
 ---
-![Locandina](/images/uploads/esempio-inclusione.jpg "Inclusione - Giuditta Matucci")
+![Locandina](/images/uploads/esempio-inclusione.jpg "Inclusione - Giuditta Matucci")<https://www.lecostituzionaliste.it/wp-content/uploads/2025/06/brochure-18-settembre-2025.pdf>
