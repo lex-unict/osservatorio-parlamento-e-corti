@@ -13,9 +13,7 @@
         {{ end }}
       </div>
       <h1 class="article-title">{{ .Title }}</h1>
-      {{ with .Description }}
-      <p class="article-description">{{ . }}</p>
-      {{ end }}
+      <p class="article-description">{{ .Description }}</p>
       
       <div class="article-meta">
         <time>{{ .Date.Format "02/01/2006" }}</time>
@@ -34,13 +32,27 @@
 
     {{ if .Params.featured_image }}
     <div class="article-featured-image">
+      {{ if .Params.pdf }}
+      <a href="{{ .Params.pdf }}" target="_blank" title="Scarica il PDF">
+        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+      </a>
+      {{ else }}
       <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
+      {{ end }}
     </div>
     {{ end }}
 
     <div class="article-content">
       {{ .Content }}
     </div>
+
+    {{ if .Params.pdf }}
+    <div class="article-pdf">
+      <a class="btn" href="{{ .Params.pdf }}" target="_blank">
+        Scarica il PDF
+      </a>
+    </div>
+    {{ end }}
 
     {{ if .Params.attachments }}
     <div class="article-attachments">
@@ -114,6 +126,11 @@
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+}
+
+.article-pdf {
+  margin: 2rem 0;
+  text-align: center;
 }
 
 .article-content {
