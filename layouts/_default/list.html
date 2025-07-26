@@ -35,6 +35,25 @@
       {{ end }}
     </div>
     {{ end }}
+
+
+    {{ if .Params.partners }}
+    <div class="article-partners">
+      <h3>Partners</h3>
+      <ul>
+        {{ range .Params.partners }}
+        <li class="article-partner-item">
+          <a href="{{ .url }}" target="_blank" class="article-partner-link">
+            {{ if .logo }}
+            <img class="article-partner-logo" src="{{ .logo }}" alt="{{ .title }}">
+            {{ end }}
+            <span class="article-partner-title">{{ .title }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
   </div>
 </div>
 
@@ -125,6 +144,48 @@
   font-size: 0.875rem;
   margin-top: 1rem;
 }
+
+
+
+.article-partners {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.article-partners h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.article-partners ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center
+  gap: 2rem;
+}
+
+.article-partners li {
+  margin: 0.5rem 0;
+  flex-grow: 1;
+}
+
+.article-partners .article-partner-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.article-partners li a img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
 
 .read-more {
   display: inline-block;
