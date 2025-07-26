@@ -15,11 +15,12 @@ collections:
     folder: "content/dottrina"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
+    fields: &contentFields
       - {label: "Titolo", name: "title", widget: "string"}
       - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
       - {label: "Descrizione", name: "description", widget: "text"}
       - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "PDF associato", name: "pdf", widget: "file", required: false}
       - {label: "Categorie", name: "categories", widget: "list"}
       - {label: "Corpo", name: "body", widget: "markdown"}
 
@@ -28,52 +29,28 @@ collections:
     folder: "content/documentazione"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
-      - {label: "Descrizione", name: "description", widget: "text"}
-      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
-      - {label: "Categorie", name: "categories", widget: "list"}
-      - {label: "Corpo", name: "body", widget: "markdown"}
+    fields: *contentFields
 
   - name: "legislazione"
     label: "Legislazione"
     folder: "content/legislazione"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
-      - {label: "Descrizione", name: "description", widget: "text"}
-      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
-      - {label: "Categorie", name: "categories", widget: "list"}
-      - {label: "Corpo", name: "body", widget: "markdown"}
+    fields: *contentFields
 
   - name: "giurisprudenza"
     label: "Giurisprudenza"
     folder: "content/giurisprudenza"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
-      - {label: "Descrizione", name: "description", widget: "text"}
-      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
-      - {label: "Categorie", name: "categories", widget: "list"}
-      - {label: "Corpo", name: "body", widget: "markdown"}
+    fields: *contentFields
 
   - name: "news"
     label: "News"
     folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
-      - {label: "Descrizione", name: "description", widget: "text"}
-      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
-      - {label: "Categorie", name: "categories", widget: "list"}
-      - {label: "Corpo", name: "body", widget: "markdown"}
+    fields: *contentFields
 
   - name: "pages"
     label: "Pagine"
