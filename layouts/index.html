@@ -3,7 +3,7 @@
   <!-- Featured Section - Single Most Recent -->
   <section class="featured-section pattern-bg-1">
     <div class="container">
-      <h2 class="section-title">In Evidenza</h2>
+      <h2 class="section-title"><a href="/in-evidenza">In Evidenza</a></h2>
       {{ range first 1 (where .Site.RegularPages "Section" "in-evidenza") }}
       <article class="featured-card">
         <div class="featured-content">
@@ -29,7 +29,7 @@
   <!-- Parliament Section - 3 rows of 4 -->
   <section class="parliament-section pattern-bg-2">
     <div class="container">
-      <h2 class="section-title">Legislazione</h2>
+      <h2 class="section-title"><a href="/legislazione">Legislazione</a></h2>
       <div class="grid-4x2">
         {{ range first 8 (where .Site.RegularPages "Section" "legislazione") }}
         <article class="grid-card">
@@ -53,7 +53,7 @@
   <!-- Courts Section - 2 rows of 4 -->
   <section class="courts-section">
     <div class="container">
-      <h2 class="section-title">Giurisprudenza</h2>
+      <h2 class="section-title"><a href="/giurisprudenza">Giurisprudenza</a></h2>
       <div class="grid-4x2">
         {{ range first 8 (where .Site.RegularPages "Section" "giurisprudenza") }}
         <article class="grid-card">
