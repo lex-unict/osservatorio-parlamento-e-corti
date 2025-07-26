@@ -3,6 +3,15 @@
   <div class="container">
     <div class="article-header">
       <div class="article-category">{{ .Section | upper }}</div>
+      <div class="article-taxonomies">
+        {{ with .Params.categories }}
+        <div class="article-taxonomies-categories">
+          {{ range . }}
+          <span class="tag">#{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
       <h1 class="article-title">{{ .Title }}</h1>
       {{ with .Description }}
       <p class="article-description">{{ . }}</p>

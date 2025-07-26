@@ -1,0 +1,577 @@
+{{ define "main" }}
+<section class="wrapper style1">
+    <div class="container">
+        <div id="search-form" class="row">
+            <div class="col-12">
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Description }}</p>
+                
+                <form id="content-search" class="search-form" onsubmit="return false;">
+                    <div class="search-row">
+                        <div class="search-field search-query">
+                            <label for="search-query">Cerca:</label>
+                            <input type="text" id="search-query" placeholder="Cerca..." class="form-control">
+                        </div>
+                        
+                        <div class="search-field search-category">
+                            <label for="category-filter">Categorie:</label>
+                            <div class="multiselect">
+                                <div class="multiselect-selected" id="category-selected">Tutte le categorie</div>
+                                <div class="multiselect-dropdown" id="category-dropdown">
+                                    <label class="multiselect-item">
+                                        <input type="checkbox" value="" checked id="category-all"> 
+                                        <span>Tutte le categorie</span>
+                                    </label>
+                                    {{ range $key, $value := .Site.Taxonomies.categories }}
+                                    <label class="multiselect-item">
+                                        <input type="checkbox" value="{{ $key }}" class="category-option"> 
+                                        <span>{{ $key }} ({{ len $value }})</span>
+                                    </label>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="search-field search-section">
+                            <label for="section-filter">Sezione:</label>
+                            <select id="section-filter" class="form-control">
+                                <option value="">Tutte le sezioni</option>
+                                {{ range .Site.Params.mainSections }}
+                                <option value="{{ . }}">{{ . | humanize }}</option>
+                                {{ end }}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-field search-date">
+                            <label for="date-from">Da:</label>
+                            <input type="date" id="date-from" class="form-control">
+                        </div>
+                        
+                        <div class="search-field search-date">
+                            <label for="date-to">A:</label>
+                            <input type="date" id="date-to" class="form-control">
+                        </div>
+                        
+                        <div class="search-field search-button">
+                            <button type="button" id="search-button" class="button alt">Cerca</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="search-results" class="row" style="display: none;">
+            <div class="col-12">
+                <h3 id="results-header">Risultati della ricerca</h3>
+                <div id="results-container"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Index -->
+<script>
+    // Create the search index when the page loads
+    const searchIndex = [
+        {{ range where .Site.RegularPages "Section" "ne" "" }}
+        {
+            title: {{ .Title }},
+            content: {{ .Plain }},
+            description: {{ .Description }},
+            permalink: {{ .Permalink }},
+            date: {{ .Date.Format "2006-01-02" }},
+            categories: {{ if .Params.categories }}{{ .Params.categories }}{{ else }}[]{{ end }},
+            section: {{ .Section }},
+            section_title: {{ .Section | humanize }}
+        },
+        {{ end }}
+    ];
+</script>
+
+<!-- Fuse.js for fuzzy search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+<!-- Search functionality -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('search-button');
+    const resultsContainer = document.getElementById('results-container');
+    const searchResults = document.getElementById('search-results');
+    const searchQuery = document.getElementById('search-query');
+    const categoryFilter = document.getElementById('category-filter');
+    const sectionFilter = document.getElementById('section-filter');
+    const dateFrom = document.getElementById('date-from');
+    const dateTo = document.getElementById('date-to');
+
+    // Configure Fuse.js options
+    const fuseOptions = {
+        includeScore: true,
+        threshold: 0.4,
+        tokenize: true,
+        matchAllTokens: true,
+        minMatchCharLength: 3,
+        useExtendedSearch: true,
+        ignoreLocation: true,
+        keys: [
+            { 
+                name: 'title', 
+                weight: 0.4,
+            },
+            { 
+                name: 'description', 
+                weight: 0.3,
+            },
+            { 
+                name: 'content', 
+                weight: 0.2,
+            },
+            { 
+                name: 'categories', 
+                weight: 0.05,
+            },
+            { 
+                name: 'section_title', 
+                weight: 0.05 
+            }
+        ]
+    };
+
+    const fuse = new Fuse(searchIndex, fuseOptions);
+
+    // Helper function to prepare search query
+    function prepareSearchQuery(query) {
+        // Split the query into words
+        const words = query.trim().split(/\s+/);
+        
+        if (words.length <= 1) {
+            return query;
+        }
+
+        // Create two patterns:
+        // 1. Exact phrase match (higher weight)
+        // 2. Individual words match (lower weight)
+        return {
+            $or: [
+                { $and: [{ $concat: words.join(' ') }] },  // Exact phrase
+                { $and: words.map(word => ({ $or: [{ title: word }, { description: word }, { content: word }] })) }  // Individual words
+            ]
+        };
+    }
+
+    // Set initial date range values if not loaded from URL
+    const today = new Date();
+    const sixMonthsAgo = new Date();
+    sixMonthsAgo.setFullYear(today.getFullYear() - 10);
+
+    // Function to load search parameters from URL
+    function loadFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        
+        searchQuery.value = params.get('q') || '';
+        const categories = params.get('category') ? params.get('category').split(',') : [];
+        if (categories.length > 0) {
+            document.getElementById('category-all').checked = false;
+            categories.forEach(cat => {
+                const checkbox = document.querySelector(`.category-option[value="${cat}"]`);
+                if (checkbox) checkbox.checked = true;
+            });
+            updateCategoryDisplay();
+        }
+        sectionFilter.value = params.get('section') || '';
+        dateFrom.value = params.get('from') || '';
+        dateTo.value = params.get('to') || '';
+
+        // Set default dates if not in URL
+        if (!dateFrom.value) dateFrom.valueAsDate = sixMonthsAgo;
+        if (!dateTo.value) dateTo.valueAsDate = today;
+
+        return {
+            query: searchQuery.value,
+            categories: getSelectedCategories(),
+            section: sectionFilter.value,
+            dateFrom: dateFrom.value,
+            dateTo: dateTo.value
+        };
+    }
+
+    // Function to get selected categories
+    function getSelectedCategories() {
+        if (document.getElementById('category-all').checked) {
+            return [];
+        }
+        return Array.from(document.querySelectorAll('.category-option:checked'))
+                   .map(checkbox => checkbox.value);
+    }
+
+    // Function to update category display
+    function updateCategoryDisplay() {
+        const selectedCategories = getSelectedCategories();
+        const displayElement = document.getElementById('category-selected');
+        
+        if (selectedCategories.length === 0) {
+            displayElement.textContent = 'Tutte le categorie';
+        } else {
+            displayElement.textContent = selectedCategories.join(', ');
+        }
+    }
+
+    // Function to update URL with search parameters
+    function updateURL(params) {
+        const url = new URL(window.location);
+        
+        // Clear existing search parameters
+        url.searchParams.delete('q');
+        url.searchParams.delete('category');
+        url.searchParams.delete('section');
+        url.searchParams.delete('from');
+        url.searchParams.delete('to');
+
+        // Add new parameters if they have values
+        if (params.query) url.searchParams.set('q', params.query);
+        if (params.categories.length > 0) url.searchParams.set('category', params.categories.join(','));
+        if (params.section) url.searchParams.set('section', params.section);
+        if (params.dateFrom) url.searchParams.set('from', params.dateFrom);
+        if (params.dateTo) url.searchParams.set('to', params.dateTo);
+
+        // Update URL without reloading the page
+        window.history.pushState({}, '', url);
+    }
+
+    function performSearch(updateUrlFlag = true) {
+        const params = {
+            query: searchQuery.value,
+            categories: getSelectedCategories(),
+            section: sectionFilter.value,
+            dateFrom: dateFrom.value,
+            dateTo: dateTo.value
+        };
+
+        // Update URL if flag is true
+        if (updateUrlFlag) {
+            updateURL(params);
+        }
+
+        // Perform the search
+        let results = [];
+        
+        if (params.query.trim()) {
+            const searchPattern = prepareSearchQuery(params.query);
+            results = fuse.search(searchPattern).map(result => result.item);
+        } else {
+            results = searchIndex;
+        }
+
+        // Apply filters
+        results = results.filter(item => {
+            let matches = true;
+
+            if (params.categories.length > 0) {
+                // Make sure both arrays exist and are properly formatted
+                const itemCategories = Array.isArray(item.categories) ? item.categories : 
+                                     (typeof item.categories === 'string' ? [item.categories] : []);
+                
+                matches = itemCategories.some(itemCat => 
+                    params.categories.some(selectedCat => 
+                        itemCat.toLowerCase() === selectedCat.toLowerCase()
+                    )
+                );
+            }
+
+            if (params.section && item.section !== params.section) {
+                matches = false;
+            }
+
+            if (params.dateFrom && item.date < params.dateFrom) {
+                matches = false;
+            }
+
+            if (params.dateTo && item.date > params.dateTo) {
+                matches = false;
+            }
+
+            return matches;
+        });
+
+        // Sort results by date (most recent first)
+        results.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Display results
+        displayResults(results);
+    }
+
+    function displayResults(results) {
+        searchResults.style.display = 'block';
+        const resultsHeader = document.getElementById('results-header');
+        
+        if (results.length === 0) {
+            resultsHeader.textContent = 'Risultati della ricerca';
+            resultsContainer.innerHTML = '<p>Nessun risultato trovato.</p>';
+            return;
+        }
+
+        // Update header with results count
+        resultsHeader.textContent = `Risultati della ricerca (${results.length} ${results.length === 1 ? 'risultato' : 'risultati'})`;
+
+        let html = '<div class="row">';
+        results.forEach(result => {
+            const categories = Array.isArray(result.categories) ? result.categories : [];
+            const date = new Date(result.date).toLocaleDateString('it-IT', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            html += `
+                <div class="col-12">
+                    <article class="box">
+                        <header>
+                            <h3><a href="${result.permalink}">${result.title}</a></h3>
+                            <p class="meta">Data: ${date} | Sezione: <a href="/${result.section}">${result.section_title}</a></p>
+                        </header>
+                        <p>${result.description || ''}</p>
+                        ${categories.length > 0 ? 
+                            `<p class="categories">Categorie: ${categories.map(cat => 
+                                `<span class="category">${cat}</span>`).join(', ')}</p>` : ''}
+                    </article>
+                </div>
+            `;
+        });
+        html += '</div>';
+        
+        resultsContainer.innerHTML = html;
+    }
+
+    // Add click event listener to search button
+    searchButton.addEventListener('click', () => performSearch(true));
+
+    // Add enter key listener to search input
+    searchQuery.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch(true);
+        }
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        loadFromURL();
+        performSearch(false);
+    });
+
+    // Load initial search from URL or perform default search
+    loadFromURL();
+    performSearch(false);
+
+    // Initialize multiselect functionality
+    const multiselect = document.querySelector('.multiselect');
+    const dropdown = document.getElementById('category-dropdown');
+    const allCheckbox = document.getElementById('category-all');
+    const categoryOptions = document.querySelectorAll('.category-option');
+
+    // Toggle dropdown
+    multiselect.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.toggle('show');
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!multiselect.contains(e.target)) {
+            dropdown.classList.remove('show');
+        }
+    });
+
+    // Handle "All categories" checkbox
+    allCheckbox.addEventListener('change', function() {
+        categoryOptions.forEach(option => {
+            option.checked = false;
+            option.disabled = this.checked;
+        });
+        updateCategoryDisplay();
+        performSearch(true);
+    });
+
+    // Handle individual category checkboxes
+    categoryOptions.forEach(option => {
+        option.addEventListener('change', function() {
+            const anyChecked = Array.from(categoryOptions).some(opt => opt.checked);
+            allCheckbox.checked = !anyChecked;
+            updateCategoryDisplay();
+            performSearch(true);
+        });
+    });
+});
+</script>
+
+<!-- Custom styles for search page -->
+<style>
+.search-form {
+    background: #f8f8f8;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 2em;
+}
+
+.search-row {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.search-row:last-child {
+    margin-bottom: 0;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-field label {
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+    color: #666;
+}
+
+.search-query {
+    flex: 2;
+}
+
+.search-category {
+    flex: 1.5;
+}
+
+.search-section {
+    flex: 1;
+}
+
+.search-date {
+    flex: 1;
+}
+
+.search-button {
+    justify-content: flex-end;
+    flex: 0.5;
+}
+
+.search-button button {
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.multiselect {
+    position: relative;
+    width: 100%;
+}
+
+.multiselect-selected {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+}
+
+.multiselect-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 2px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.multiselect-dropdown.show {
+    display: block;
+}
+
+.multiselect-item {
+    display: block;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.multiselect-item:hover {
+    background: #f5f5f5;
+}
+
+.multiselect-item input {
+    margin-right: 0.5em;
+}
+
+.box {
+    background: #f8f8f8;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 4px;
+}
+
+.box header {
+    margin-bottom: 1em;
+}
+
+.box header h3 {
+    margin: 0;
+}
+
+.box p {
+    margin: 0.5em 0;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.category {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    margin: 0.1em;
+    background: #e9ecef;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 736px) {
+    .search-row {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .search-button {
+        margin-top: 0.5em;
+    }
+
+    .search-button button {
+        margin-top: 0;
+    }
+}
+</style>
+{{ end }} 

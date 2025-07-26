@@ -40,6 +40,10 @@ theme = "arcana"
     name = "News"
     url = "/news/"
     weight = 7
+  [[menu.main]]
+    name = "Ricerca"
+    url = "/search/"
+    weight = 8
 
 [taxonomies]
   tag = "tags"
