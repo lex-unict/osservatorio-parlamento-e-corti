@@ -322,13 +322,9 @@ main {
     border-radius: 4px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   main {
     grid-template-columns: 1fr;
-  }
-
-  .grid-4x2 {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .contacts-grid {
@@ -341,6 +337,12 @@ main {
   }
 
   .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-4x2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
