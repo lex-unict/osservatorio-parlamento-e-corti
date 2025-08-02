@@ -95,6 +95,8 @@ h1, h2, h3, h4, h5, h6, .article-title {
     top: 0;
     z-index: 1000;
     width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .nav-link {
@@ -107,6 +109,84 @@ h1, h2, h3, h4, h5, h6, .article-title {
 
 .nav-link:hover {
     background-color: rgba(255,255,255,0.1);
+}
+
+.main-nav-links a[href="/search/"] {
+    color: rgba(255,255,255,0);
+    position: relative;
+}
+
+.main-nav-links a[href="/search/"]:before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+    position: absolute;
+    left: 38%;
+    top: .7em;
+}
+
+.main-nav-links a[href="/search/"]:hover:before {
+    opacity: 1;
+}
+
+
+/* Mobile menu styles */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.3s;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -6px;
+}
+
+.hamburger::after {
+    bottom: -6px;
+}
+
+.mobile-menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.mobile-menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.mobile-menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    bottom: 0;
 }
 
 /* Main Content */
@@ -258,6 +338,35 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .main-nav-links a[href="/search/"]::before {
+        left: 48%;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav-links {
+        display: none;
+    }
+
+    .main-nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-nav-links .nav-link {
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-container {
+        position: relative;
+        padding: 10px 20px;
+    }
+
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -284,34 +393,4 @@ footer {
         display: block;
         margin: 0.5rem 0;
     }
-} 
-
-nav.main-nav a[href="/search/"] {
-    color: rgba(255,255,255,0);
 }
-
-nav.main-nav a[href="/search/"]:before {
-    content: '';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.8;
-    transition: opacity 0.2s ease-in-out;
-}
-
-nav.main-nav a[href="/search/"]:hover:before {
-    opacity: 1;
-}
-
-/* Adjust icon position on mobile */
-@media screen and (max-width: 736px) {
-    nav.main-nav a[href="/search/"]:before {
-        width: 1em;
-        height: 1em;
-    }
-} 

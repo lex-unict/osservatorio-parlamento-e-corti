@@ -20,9 +20,14 @@
             </div>
             
             <nav class="main-nav">
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
-                {{ end }}
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <div class="main-nav-links"  id="main-nav-links">
+                    {{ range .Site.Menus.main }}
+                    <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                    {{ end }}
+                </div>
             </nav>
         </div>
     </header>
@@ -76,6 +81,17 @@
                 }
             });
         }
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('main-nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html> 
