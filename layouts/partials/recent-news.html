@@ -1,7 +1,7 @@
 {{ $news := where .Site.RegularPages "Section" "news" }}
 <div class="news-box">
     <h3 class="section-title">News</h3>
-    {{ range first 5 $news.ByDate.Reverse }}
+    {{ range first 7 $news.ByDate.Reverse }}
     <div class="news-item">
         <div class="news-date-box">
             <div class="month">{{ .Date.Format "Jan" | upper }}</div>
