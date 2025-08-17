@@ -12,35 +12,43 @@ L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziat
 
 Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed analizzare  il concreto esercizio della funzione legislativa da parte del Parlamento nei rapporti con con altri soggetti istituzionali, ed in particolare con la Corte costituzionale.
 
-
-
 # **L'OSSERVATORIO**
 
 ## Direzione scientifica
 
-**Prof. Giuseppe Chiara** 
-*Professore ordinario di Diritto costituzionale e pubblico*
-Università di Catania
+**Prof. Giuseppe Chiara**
+
+*Ordinario di Diritto costituzionale e pubblico -* Università di Catania
 
 ## Coordinamento tecnico-scientifico
 
-**Dott. Ignazio Spadaro** 
+* **Prof. Giancarlo A. Ferro**
 
-*Ricercatore di Diritto costituzionale e pubblico*
-Università di Catania
+  *Università di Catania*
+* **Dott. Ignazio Spadaro** 
 
-## 
-Comitato di Redazione
+  *Università di Catania*
 
-* Dott. Andrea Russo\
-  Ricercatore in Diritto Costituzionale
-* Dott.ssa Sofia Ferrara\
-  Assegnista di Ricerca
-* Dott. Marco Esposito\
-  Dottorando in Diritto Pubblico
+## Comitato di Redazione
 
+* **Prof. Marco Ladu**
 
+  *Università di Brescia - Università e-Campus*
+* **Dott.ssa Caterina Adamo**
 
+  *Università di Catania*
+* **Dott. Vittorio Fazio**
+
+  *Università di Catania*
+* **Dott. Paolo Inturri**\
+  *Università di Catania*
+* **Dott. Marco Melpignano**\
+  *Università "A. Moro" - Bari*
+* **Dott. Matteo Milanesi**
+
+  *Università Cattolica del Sacro Cuore - Milano*
+* **Dott.ssa Chiara Sagone**
+  *Università di Catania*
 
 
 
@@ -50,12 +58,10 @@ Comitato di Redazione
 
 Dott. Ignazio Spadaro 
 
-
 ## Direttori scientifici
 
 Prof. Emilio Castorina, Prof.ssa Adriana Ciancio, Prof. Giuseppe Chiara, Prof. Giancarlo A. Ferro
 
-(Università di Catania)
 
 
 ## Altri membri del Gruppo di ricerca
