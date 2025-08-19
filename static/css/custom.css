@@ -61,10 +61,13 @@ h1, h2, h3, h4, h5, h6, .article-title {
     font-style: italic;
     color: rgb(101,103,103);
 }
+/* .frame-content is used in the admin preview context */
+.frame-content h1, .frame-content h2, .frame-content h3, .frame-content h4, .frame-content h5, .frame-content h6,
 .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6 {
     font-family: 'Merriweather', serif;
     color: rgb(48,86,126);
 }
+.frame-content h2,
 .article-content h2 {
     font-family: 'Gentium Plus', 'Merriweather', serif;
     font-size: 1.1em;
