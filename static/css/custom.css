@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6, .article-title {
 }
 .article-title {
     font-size: 24pt;
+    color: rgb(48,86,126);
 }
 .article-description {
     font-family: 'BBT', 'Merriweather', serif;
