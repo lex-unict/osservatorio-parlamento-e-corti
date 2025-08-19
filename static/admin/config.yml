@@ -52,6 +52,59 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: *contentFields
 
+  - name: "settings"
+    label: "Impostazioni"
+    files:
+      - name: "footer"
+        label: "Footer"
+        file: "data/footer.yml"
+        fields:
+          - label: "Logo Contatti"
+            name: "contact_logo"
+            widget: "object"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Immagine", name: "image", widget: "image"}
+              - {label: "Testo alternativo", name: "alt", widget: "string"}
+          
+          - label: "Informazioni di Contatto"
+            name: "contact_info"
+            widget: "object"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Dipartimento", name: "department", widget: "string"}
+              - {label: "Indirizzo", name: "address", widget: "string"}
+              - label: "Email"
+                name: "email"
+                widget: "object"
+                fields:
+                  - {label: "Redazione", name: "editorial", widget: "string"}
+                  - {label: "News", name: "news", widget: "string"}
+          
+          - label: "Privacy"
+            name: "privacy"
+            widget: "object"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Testo", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+          
+          - label: "Area Riservata"
+            name: "admin_area"
+            widget: "object"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - {label: "Testo", name: "text", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+
   - name: "pages"
     label: "Pagine"
     files:

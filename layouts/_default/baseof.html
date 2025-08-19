@@ -39,29 +39,33 @@
     <footer>
         <div class="contact-section">
             <div class="contact-logo">
-                <h4>Progetto finanziato da:</h4>
-                <img src="/images/contact-logo-white.png" alt="Università di Catania" class="clickable-logo">
+                <h4>{{ site.Data.footer.contact_logo.title }}</h4>
+                <img src="{{ site.Data.footer.contact_logo.image }}" alt="{{ site.Data.footer.contact_logo.alt }}" class="clickable-logo">
             </div>
             <div class="contact-columns">
                 <div class="contact-column">
-                    <h4>Contatti</h4>
+                    <h4>{{ site.Data.footer.contact_info.title }}</h4>
                     <p>
-                        Dipartimento di Giurisprudenza<br>
-                        Via Gallo n. 24 – 95124 Catania (CT) <br>
-                        <b>Redazione</b>: redazione@XXX <br>
-                        <b>Segnalazione News</b>: news@XXX
+                        {{ site.Data.footer.contact_info.department }}<br>
+                        {{ site.Data.footer.contact_info.address }}<br>
+                        <b>Redazione</b>: {{ site.Data.footer.contact_info.email.editorial }}<br>
+                        <b>Segnalazione News</b>: {{ site.Data.footer.contact_info.email.news }}
                     </p>
                 </div>
                 <div class="contact-column">
-                    <h4>Privacy</h4>
+                    <h4>{{ site.Data.footer.privacy.title }}</h4>
                     <ul>
-                        <li><a href="https://www.lex.unict.it/it/chi-siamo/privacy" target="_blank">Privacy Policy</a></li>
+                        {{ range site.Data.footer.privacy.links }}
+                        <li><a href="{{ .url }}" target="_blank">{{ .text }}</a></li>
+                        {{ end }}
                     </ul>
                 </div>
                 <div class="contact-column">
-                    <h4>Area riservata</h4>
+                    <h4>{{ site.Data.footer.admin_area.title }}</h4>
                     <ul>
-                        <li><a href="/admin/" target="_blank">Gestione del sito</a></li>
+                        {{ range site.Data.footer.admin_area.links }}
+                        <li><a href="{{ .url }}" target="_blank">{{ .text }}</a></li>
+                        {{ end }}
                     </ul>
                 </div>
             </div>
