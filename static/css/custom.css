@@ -8,9 +8,11 @@
     --background-color: #8b8c94;
     --text-color: #2c3e50;
     --soft-text-color: #666;
-    --footer-link-color: #ccc;
     --title-color: #333;
     --section-background-color: #f8f9fa;
+    --footer-link-color: #eee;
+    --footer-text-color: #ccc;
+    --footer-title-color: #fff;
 }
 
 /* Global Styles */
@@ -409,6 +411,14 @@ footer {
     color: white;
     padding: 3rem 0 1rem;
     margin-top: 3rem;
+}
+
+footer .contact-section p {
+    color: var(--footer-text-color);
+}
+
+footer h4 {
+    color: var(--footer-title-color);
 }
 
 .contact-section {
