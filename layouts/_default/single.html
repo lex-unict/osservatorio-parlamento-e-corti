@@ -66,4 +66,23 @@
     {{ end }}
   </div>
 </article>
+
+<style>
+  .article-content::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .article-content ul,
+  .article-content ol {
+    list-style-position: inside;
+  }
+  .article-featured-image {
+    float: left;
+    margin: 0 2em 0 0;
+  }
+  .article-featured-image img {
+    max-width: 300px;
+  }
+</style>
 {{ end }} 
