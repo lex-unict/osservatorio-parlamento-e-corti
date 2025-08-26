@@ -17,10 +17,10 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: &contentFields
       - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data dell'atto", name: "act_date", widget: "datetime"}
+      - {label: "Data dell'atto", name: "act_date", widget: "datetime", required: false}
       - {label: "Data di pubblicazione", name: "date", widget: "datetime", default: "now"}
       - {label: "Descrizione", name: "description", widget: "text"}
-      - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
+      - {label: "Immagine in evidenza", name: "featured_image", widget: "image", required: false}
       - {label: "PDF associato", name: "pdf", widget: "file", required: false}
       - {label: "Categorie", name: "categories", widget: "list"}
       - {label: "Corpo", name: "body", widget: "markdown"}
