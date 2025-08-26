@@ -343,12 +343,19 @@ input[type="email"] {
 
 button, .btn {
     background-color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background-color: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
 }
 
 main a:hover {
