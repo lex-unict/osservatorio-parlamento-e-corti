@@ -6,7 +6,12 @@
       {{ $dottrinaPages := where .Site.RegularPages "Section" "dottrina" }}
       {{ $documentazionePages := where .Site.RegularPages "Section" "documentazione" }}
       {{ $allPages := union $dottrinaPages $documentazionePages }}
-      <h2 class="section-title"><a href="/in-evidenza">In Evidenza</a></h2>
+      <h2 class="section-title">
+        <div class="default-icon">
+          <img src="/images/writing-icon.png" alt="Writing Icon">
+        </div>
+        <a href="/in-evidenza">In Evidenza</a>
+      </h2>
       {{ range first 1 (sort $allPages "Date" "desc") }}
       <article class="featured-card">
         <div class="featured-content">
@@ -38,7 +43,7 @@
         <article class="grid-card">
           <div class="card-content">
             <div class="default-icon">
-              <img src="/images/legislation-icon.png" alt="Writing Icon">
+              <img src="/images/legislation-icon.png" alt="Assemble Icon">
             </div>
             <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
             {{ with .Description }}
