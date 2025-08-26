@@ -17,7 +17,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: &contentFields
       - {label: "Titolo", name: "title", widget: "string"}
-      - {label: "Data di pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Data dell'atto", name: "act_date", widget: "datetime"}
+      - {label: "Data di pubblicazione", name: "date", widget: "datetime", default: "now"}
       - {label: "Descrizione", name: "description", widget: "text"}
       - {label: "Immagine in evidenza", name: "featured_image", widget: "image"}
       - {label: "PDF associato", name: "pdf", widget: "file", required: false}
