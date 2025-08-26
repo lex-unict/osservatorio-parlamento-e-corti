@@ -32,13 +32,7 @@
 
     {{ if .Params.featured_image }}
     <div class="article-featured-image">
-      {{ if .Params.pdf }}
-      <a href="{{ .Params.pdf }}" target="_blank" title="Scarica il PDF">
-        <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
-      </a>
-      {{ else }}
       <img src="{{ .Params.featured_image }}" alt="{{ .Title }}">
-      {{ end }}
     </div>
     {{ end }}
 
