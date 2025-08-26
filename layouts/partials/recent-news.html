@@ -1,6 +1,6 @@
 {{ $news := where .Site.RegularPages "Section" "news" }}
 <div class="news-box">
-    <h3 class="section-title">News</h3>
+    <h1 class="section-title">News</h1>
     {{ range first 7 $news.ByDate.Reverse }}
     <div class="news-item">
         <div class="news-date-box">
@@ -9,7 +9,7 @@
             <div class="year">{{ .Date.Format "2006" }}</div>
         </div>
         <div class="news-content">
-            <h4 class="news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <h2 class="news-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
             <p class="news-description">{{ .Description }}</p>
             <a href="{{ .RelPermalink }}" class="read-more btn">Leggi</a>
         </div>

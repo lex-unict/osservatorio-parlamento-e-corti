@@ -6,12 +6,12 @@
       {{ $dottrinaPages := where .Site.RegularPages "Section" "dottrina" }}
       {{ $documentazionePages := where .Site.RegularPages "Section" "documentazione" }}
       {{ $allPages := union $dottrinaPages $documentazionePages }}
-      <h2 class="section-title">
+      <h1 class="section-title">
         <div class="default-icon">
           <img src="/images/writing-icon.png" alt="Writing Icon">
         </div>
         <a href="/in-evidenza">In Evidenza</a>
-      </h2>
+      </h1>
       {{ range first 1 (sort $allPages "Date" "desc") }}
       <article class="featured-card">
         <div class="featured-content">
@@ -37,7 +37,7 @@
   <!-- Parliament Section - 3 rows of 4 -->
   <section class="parliament-section pattern-bg-2">
     <div class="container">
-      <h2 class="section-title"><a href="/legislazione">Legislazione</a></h2>
+      <h1 class="section-title"><a href="/legislazione">Legislazione</a></h1>
       <div class="grid-4x2">
         {{ range first 8 (where .Site.RegularPages "Section" "legislazione") }}
         <article class="grid-card">
@@ -60,7 +60,7 @@
   <!-- Courts Section - 2 rows of 4 -->
   <section class="courts-section">
     <div class="container">
-      <h2 class="section-title"><a href="/giurisprudenza">Giurisprudenza</a></h2>
+      <h1 class="section-title"><a href="/giurisprudenza">Giurisprudenza</a></h1>
       <div class="grid-4x2">
         {{ range first 8 (where .Site.RegularPages "Section" "giurisprudenza") }}
         <article class="grid-card">
