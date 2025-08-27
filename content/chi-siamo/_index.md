@@ -11,12 +11,12 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 # **L'OSSERVATORIO**
 
-# Direzione scientifica
+# Direzione Scientifica
 
 **[Prof. Giuseppe Chiara](https://www.lex.unict.it/docenti/giuseppe.chiara)**\
 *Università di Catania*
 
-## Coordinamento tecnico-scientifico
+## Coordinamento Tecnico-Scientifico
 
 **[Prof. Giancarlo A. Ferro](https://www.lex.unict.it/docenti/giancarlo.ferro)**\
 *Università di Catania*
