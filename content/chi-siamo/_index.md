@@ -21,11 +21,9 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Coordinamento tecnico-scientifico
 
-* **Prof. Giancarlo A. Ferro**
-
+* **Prof. Giancarlo A. Ferro**\
   *Università di Catania*
-* **Dott. Ignazio Spadaro** 
-
+* **Dott. Ignazio Spadaro**\
   *Università di Catania*
 
 ## Comitato di Redazione
