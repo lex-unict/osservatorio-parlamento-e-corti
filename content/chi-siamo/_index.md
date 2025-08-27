@@ -29,13 +29,13 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 **Prof. Marco Ladu**  \
 *Università di Brescia - Università e-Campus*
 
-**Dott.ssa Caterina Adamo** \
+[**Dott.ssa Caterina Adamo** ](https://www.lex.unict.it/dottorando/caterina.adamo)\
 *Università di Catania*
 
-**Dott. Vittorio Fazio** \
+**[Dott. Vittorio Fazio](https://www.lex.unict.it/dottorando/vittorio.fazio)** \
 *Università di Catania*
 
-**Dott. Paolo Inturri**\
+**[Dott. Paolo Inturri](https://www.lex.unict.it/dottorando/paolo.inturri)**\
 *Università di Catania*
 
 **Dott. Marco Melpignano**\
@@ -44,7 +44,7 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 **Dott. Matteo Milanesi** \
 *Università Cattolica del Sacro Cuore - Milano*
 
-**Dott.ssa Chiara Sagone** \
+[**Dott.ssa Chiara Sagone** ](https://www.lex.unict.it/docenti/chiara.sagone)\
 *Università di Catania*
 
 # **IL PROGETTO EM.PA.DEM.**
@@ -59,6 +59,6 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Altri membri del Gruppo di ricerca
 
-Prof. **Samuele Gherardi** (Universidad Complutense de Madrid), Dott.ssa **Alessia Fonzi** (Università dell'Aquila), Dott.ssa **Nannerel Fiano** (Università di Milano), Dott. **Antonello Lo Calzo** (Università di Pisa), Dott.ssa **Chiara Sagone** (Università di Catania), Dott.ssa **Ilaria De Cesare** (Università di Pavia), Dott. **Vittorio Fazio** (Università di Catania), Dott. **Paolo Inturri** (Università di Catania)
+**Prof. Samuele Gherardi** (Universidad Complutense de Madrid), **Dott.ssa Alessia Fonzi** (Università dell'Aquila), **[Dott.ssa Nannerel Fiano](https://www.unimi.it/it/ugov/person/nannerel-fiano)** (Università di Milano), **[Dott. Antonello Lo Calzo](https://www.unipi.it/ateneo/organizzazione/persone/antonello-lo-calzo-128328/)** (Università di Pisa), **[Dott.ssa Chiara Sagone](https://www.lex.unict.it/assegnisti-di-ricerca/chiara.sagone)** (Università di Catania), **Dott.ssa Ilaria De Cesare** (Università di Pavia), **[Dott. Vittorio Fazio](https://www.lex.unict.it/dottorando/vittorio.fazio)** (Università di Catania), **[Dott. Paolo Inturri](https://www.lex.unict.it/dottorando/paolo.inturri)** (Università di Catania)
 
 ![](/images/uploads/logo-piaceri.jpg)<https://www.unict.it/it/ricerca/piano-di-incentivi-la-ricerca-di-ateneo-20202022>
