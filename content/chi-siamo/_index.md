@@ -1,6 +1,9 @@
 ---
 title: Chi siamo
-partners: []
+partners:
+  - title: Instituto de Derecho Parlamentario - UCM
+    logo: /images/uploads/logo-idp-1-.jpg
+    url: https://www.ucm.es/idp/que-es-el-idp
 ---
 L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziativa del Progetto "***Emarginazione del Parlamento e crisi della democrazia rappresentativa***" (Em.Pa.Dem.), finanziato dall'Università degli studi di Catania  nell'ambito del “Piano di incentivi per la ricerca di Ateneo 2020-2022”  - linea di intervento 3.
 
