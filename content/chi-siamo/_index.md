@@ -11,7 +11,7 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 # **L'OSSERVATORIO**
 
-# Direzione Scientifica
+## Direzione Scientifica
 
 **[Prof. Giuseppe Chiara](https://www.lex.unict.it/docenti/giuseppe.chiara)**\
 *Università di Catania*
