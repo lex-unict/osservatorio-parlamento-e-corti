@@ -16,9 +16,8 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Direzione scientifica
 
-**Prof. Giuseppe Chiara**
-
-*Ordinario di Diritto costituzionale e pubblico -* Università di Catania
+**Prof. Giuseppe Chiara**\
+*Università di Catania*
 
 ## Coordinamento tecnico-scientifico
 
@@ -50,8 +49,6 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 * **Dott.ssa Chiara Sagone**
   *Università di Catania*
 
-
-
 # **IL PROGETTO EM.PA.DEM.**
 
 ## Principal Investigator
@@ -61,8 +58,6 @@ Dott. Ignazio Spadaro
 ## Direttori scientifici
 
 Prof. Emilio Castorina, Prof.ssa Adriana Ciancio, Prof. Giuseppe Chiara, Prof. Giancarlo A. Ferro
-
-
 
 ## Altri membri del Gruppo di ricerca
 
