@@ -54,12 +54,12 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Principal Investigator
 
-Dott. Ignazio Spadaro 
+Dott. **Ignazio Spadaro** 
 
 ## Direttori scientifici
 
-Prof. Emilio Castorina, Prof.ssa Adriana Ciancio, Prof. Giuseppe Chiara, Prof. Giancarlo A. Ferro
+Prof. **Emilio Castorina**, Prof.ssa **Adriana Ciancio**, Prof. **Giuseppe Chiara**, Prof. **Giancarlo A. Ferro**
 
 ## Altri membri del Gruppo di ricerca
 
-Prof. Samuele Gherardi (Universidad Complutense de Madrid), dott.ssa Alessia Fonzi (Università dell'Aquila), dott.ssa Nannerel Fiano (Università di Milano), dott. Antonello Lo Calzo (Università di Pisa), dott.ssa Chiara Sagone (Università di Catania), dott.ssa Ilaria De Cesare (Università di Pavia), dott. Vittorio Fazio (Università di Catania), dott. Paolo Inturri (Università di Catania)
+Prof. **Samuele Gherardi** (Universidad Complutense de Madrid), Dott.ssa **Alessia Fonzi** (Università dell'Aquila), Dott.ssa **Nannerel Fiano** (Università di Milano), Dott. **Antonello Lo Calzo** (Università di Pisa), Dott.ssa **Chiara Sagone** (Università di Catania), Dott.ssa **Ilaria De Cesare** (Università di Pavia), Dott. **Vittorio Fazio** (Università di Catania), Dott. **Paolo Inturri** (Università di Catania)
