@@ -60,3 +60,5 @@ Prof. **Emilio Castorina**, Prof.ssa **Adriana Ciancio**, Prof. **Giuseppe Chiar
 ## Altri membri del Gruppo di ricerca
 
 Prof. **Samuele Gherardi** (Universidad Complutense de Madrid), Dott.ssa **Alessia Fonzi** (Università dell'Aquila), Dott.ssa **Nannerel Fiano** (Università di Milano), Dott. **Antonello Lo Calzo** (Università di Pisa), Dott.ssa **Chiara Sagone** (Università di Catania), Dott.ssa **Ilaria De Cesare** (Università di Pavia), Dott. **Vittorio Fazio** (Università di Catania), Dott. **Paolo Inturri** (Università di Catania)
+
+![](/images/uploads/logo-piaceri.jpg)
