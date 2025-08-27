@@ -13,7 +13,7 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 # Direzione scientifica
 
-**Prof. Giuseppe Chiara**\
+**[Prof. Giuseppe Chiara](https://www.lex.unict.it/docenti/giuseppe.chiara)**\
 *Università di Catania*
 
 ## Coordinamento tecnico-scientifico
@@ -61,4 +61,4 @@ Prof. **Emilio Castorina**, Prof.ssa **Adriana Ciancio**, Prof. **Giuseppe Chiar
 
 Prof. **Samuele Gherardi** (Universidad Complutense de Madrid), Dott.ssa **Alessia Fonzi** (Università dell'Aquila), Dott.ssa **Nannerel Fiano** (Università di Milano), Dott. **Antonello Lo Calzo** (Università di Pisa), Dott.ssa **Chiara Sagone** (Università di Catania), Dott.ssa **Ilaria De Cesare** (Università di Pavia), Dott. **Vittorio Fazio** (Università di Catania), Dott. **Paolo Inturri** (Università di Catania)
 
-![](/images/uploads/logo-piaceri.jpg)
+![](/images/uploads/logo-piaceri.jpg)<https://www.unict.it/it/ricerca/piano-di-incentivi-la-ricerca-di-ateneo-20202022>
