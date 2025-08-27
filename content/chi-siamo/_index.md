@@ -7,7 +7,7 @@ partners:
 ---
 L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziativa del Progetto "***Emarginazione del Parlamento e crisi della democrazia rappresentativa***" (Em.Pa.Dem.), finanziato dall'Università degli studi di Catania  nell'ambito del “Piano di incentivi per la ricerca di Ateneo 2020-2022”  - linea di intervento 3.
 
-Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed analizzare  il concreto esercizio della funzione legislativa da parte del Parlamento nei rapporti con con altri soggetti istituzionali, ed in particolare con la Corte costituzionale.
+Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed analizzare  il concreto esercizio della funzione legislativa da parte del Parlamento nei rapporti con con altri soggetti istituzionali, ed in particolare con la Corte costituzionale. 
 
 # **L'OSSERVATORIO**
 
