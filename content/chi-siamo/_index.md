@@ -1,12 +1,6 @@
 ---
 title: Chi siamo
-partners:
-  - title: Università di Catania
-    url: https://www.unict.it/
-    logo: https://images.squarespace-cdn.com/content/v1/60056c48dfad4a3649200fc0/1611077270135-4EXXT2EB9JJS30OW6ERW/unict-logo.png?format=750w
-  - title: Unione Nazionale Lotta all'Analfabetismo
-    url: https://www.unla.it/
-    logo: https://admin.materaevents.it/getimage/i=12430-c=77801/preview.jpg
+partners: []
 ---
 L'**Osservatorio su legislazione e giurisprudenza** nasce  nel 2025 come iniziativa del Progetto "***Emarginazione del Parlamento e crisi della democrazia rappresentativa***" (Em.Pa.Dem.), finanziato dall'Università degli studi di Catania  nell'ambito del “Piano di incentivi per la ricerca di Ateneo 2020-2022”  - linea di intervento 3.
 
