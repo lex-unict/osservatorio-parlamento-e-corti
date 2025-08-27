@@ -1,24 +1,21 @@
 contact_logo:
-  title: "Progetto finanziato da:"
-  image: "/images/contact-logo-white.png"
-  alt: "Università di Catania"
-
+  title: Progetto finanziato da
+  image: /images/uploads/unict-logo-bianco.png
+  alt: Università degli studi di Catania
 contact_info:
-  title: "Contatti"
-  department: "Dipartimento di Giurisprudenza"
-  address: "Via Gallo n. 24 – 95124 Catania (CT)"
+  title: Contatti
+  department: Dipartimento di Giurisprudenza
+  address: Via Gallo n. 24 – 95124 Catania (CT)
   email:
-    editorial: "redazione@XXX"
-    news: "news@XXX"
-
+    editorial: osservatorio@legislazione-giurisprudenza.it
+    news: news@legislazione-giurisprudenza.it
 privacy:
-  title: "Privacy"
+  title: Privacy
   links:
-    - text: "Privacy Policy"
-      url: "https://www.lex.unict.it/it/chi-siamo/privacy"
-
+    - text: Privacy Policy
+      url: https://www.lex.unict.it/it/chi-siamo/privacy
 admin_area:
-  title: "Area riservata"
+  title: Area riservata
   links:
-    - text: "Gestione del sito"
-      url: "/admin/"
+    - text: Gestione del sito
+      url: /admin/
