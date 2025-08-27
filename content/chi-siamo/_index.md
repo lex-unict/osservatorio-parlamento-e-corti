@@ -21,31 +21,34 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Coordinamento tecnico-scientifico
 
-* **Prof. Giancarlo A. Ferro**\
-  *Università di Catania*
-* **Dott. Ignazio Spadaro**\
-  *Università di Catania*
+**Prof. Giancarlo A. Ferro**\
+*Università di Catania*
+
+**Dott. Ignazio Spadaro**\
+*Università di Catania*
 
 ## Comitato di Redazione
 
-* **Prof. Marco Ladu**
+**Prof. Marco Ladu**  \
+*Università di Brescia - Università e-Campus*
 
-  *Università di Brescia - Università e-Campus*
-* **Dott.ssa Caterina Adamo**
+**Dott.ssa Caterina Adamo** \
+*Università di Catania*
 
-  *Università di Catania*
-* **Dott. Vittorio Fazio**
+**Dott. Vittorio Fazio** \
+*Università di Catania*
 
-  *Università di Catania*
-* **Dott. Paolo Inturri**\
-  *Università di Catania*
-* **Dott. Marco Melpignano**\
-  *Università "A. Moro" - Bari*
-* **Dott. Matteo Milanesi**
+**Dott. Paolo Inturri**\
+*Università di Catania*
 
-  *Università Cattolica del Sacro Cuore - Milano*
-* **Dott.ssa Chiara Sagone**
-  *Università di Catania*
+**Dott. Marco Melpignano**\
+*Università "A. Moro" - Bari*
+
+**Dott. Matteo Milanesi** \
+*Università Cattolica del Sacro Cuore - Milano*
+
+**Dott.ssa Chiara Sagone** \
+*Università di Catania*
 
 # **IL PROGETTO EM.PA.DEM.**
 
