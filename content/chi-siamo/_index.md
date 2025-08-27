@@ -18,10 +18,10 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Coordinamento tecnico-scientifico
 
-**Prof. Giancarlo A. Ferro**\
+**[Prof. Giancarlo A. Ferro](https://www.lex.unict.it/docenti/giancarlo.ferro)**\
 *Università di Catania*
 
-**Dott. Ignazio Spadaro**\
+**[Dott. Ignazio Spadaro](https://www.lex.unict.it/docenti/ignazio.spadaro)**\
 *Università di Catania*
 
 ## Comitato di Redazione
@@ -51,11 +51,11 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 ## Principal Investigator
 
-Dott. **Ignazio Spadaro** 
+**[Dott. Ignazio Spadaro](https://www.lex.unict.it/docenti/ignazio.spadaro)** 
 
 ## Direttori scientifici
 
-Prof. **Emilio Castorina**, Prof.ssa **Adriana Ciancio**, Prof. **Giuseppe Chiara**, Prof. **Giancarlo A. Ferro**
+**[Prof. Emilio Castorina](https://www.lex.unict.it/docenti/emilio.castorina)**, **[Prof.ssa Adriana Ciancio](https://www.lex.unict.it/docenti/adriana.ciancio)**, **[Prof. Giuseppe Chiara](https://www.lex.unict.it/docenti/giuseppe.chiara)**, **[Prof. Giancarlo A. Ferro](https://www.lex.unict.it/docenti/giancarlo.ferro)**
 
 ## Altri membri del Gruppo di ricerca
 
