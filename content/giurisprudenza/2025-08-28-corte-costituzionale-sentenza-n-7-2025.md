@@ -67,11 +67,11 @@ Art. 3 Cost. - Art. 27, co. 3 Cost. -  Artt. 11 e 117, co. 1, Cost., in relazio
 
 # Precedenti connessi
 
-*Sulla necessaria proporzione della sanzione pecuniaria alla condizione patrimoniale del reo*
+***Sulla necessaria proporzione della sanzione pecuniaria alla condizione patrimoniale del reo***
 
-C. cost., *[sentenza 1° febbraio 2022, n. 28](https://giurcost.org/decisioni/2022/0028s-22.html?titolo=Sentenza%20n.%2028)*
+* C. cost., *[sentenza 1° febbraio 2022, n. 28](https://giurcost.org/decisioni/2022/0028s-22.html?titolo=Sentenza%20n.%2028)*
 
-*Sulla necessaria sostituzione pretoria delle clausole sanzionatorie solo per prevenire vuoti di tutela*
+***Sulla necessaria sostituzione pretoria delle clausole sanzionatorie solo per prevenire vuoti di tutela***
 
 * C. cost., *[sentenza 5 dicembre 2018, n. 222](https://giurcost.org/decisioni/2018/0222s-18.html?titolo=Sentenza%20n.%20222)*
 * C. cost., *[sentenza 22 marzo 2024, n. 46](https://giurcost.org/decisioni/2024/0046s-24.html?titolo=Sentenza%20n.%20%2046)*
