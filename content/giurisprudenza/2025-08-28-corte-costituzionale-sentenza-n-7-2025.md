@@ -2,6 +2,10 @@
 title: Corte costituzionale - Sentenza n. 7/2025
 date: 2025-08-28T23:07:00.000+02:00
 description: Report Giurisprudenza n. 1/2025
+pdf: /images/uploads/giur.-04.02.2025.pdf
+categories:
+  - Pene
+  - Confisca
 ---
 ***[Testo](https://giurcost.org/decisioni/2025/0007s-25.html?titolo=Sentenza%20n.%207)***
 
