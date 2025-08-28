@@ -1,7 +1,7 @@
 ---
-title: Introduzione della mototerapia
+title: Introduzione della mototerapia - Legge n. 210/2024
 date: 2025-08-28T22:22:00.000+02:00
-description: Legge 16 dicembre 2024, n. 210
+description: Pubbl. 16 dicembre 2024
 pdf: /images/uploads/leg.-2.01.2025.pdf
 categories:
   - Salute
