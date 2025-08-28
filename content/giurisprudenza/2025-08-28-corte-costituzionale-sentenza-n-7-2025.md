@@ -7,7 +7,7 @@ categories:
   - Pene
   - Confisca
 ---
-***[Testo](https://giurcost.org/decisioni/2025/0007s-25.html?titolo=Sentenza%20n.%207)***
+***Testo[](https://giurcost.org/decisioni/2025/0007s-25.html?titolo=Sentenza%20n.%207)***
 
 # Materia
 
