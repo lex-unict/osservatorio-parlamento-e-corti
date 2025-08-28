@@ -1,7 +1,7 @@
 ---
 title: Corte costituzionale - Sentenza n. 7/2025
 date: 2025-08-28T23:07:00.000+02:00
-description: Report n. 1/2025
+description: Report Giurisprudenza n. 1/2025
 ---
 ***[Testo](https://giurcost.org/decisioni/2025/0007s-25.html?titolo=Sentenza%20n.%207)***
 
@@ -9,25 +9,17 @@ description: Report n. 1/2025
 
 Pene – Confisca
 
- 
-
 # Tipologia di decisione
 
 Sentenza di illegittimità parziale
-
- 
 
 # Oggetto della q.l.c.
 
 ***[Art. 2141 c.c.](https://www.normattiva.it/atto/caricaDettaglioAtto?atto.dataPubblicazioneGazzetta=1942-04-04&atto.codiceRedazionale=042U0262&atto.articolo.numero=0&atto.articolo.sottoArticolo=1&atto.articolo.sottoArticolo1=0&qId=79e0a90a-18be-4896-af97-5cdb36aba8e1&tabID=0.9247653760915712&title=lbl.dettaglioAtto)***
 
- 
-
 # Parametri
 
 Art. 3 Cost. - Art. 27, co. 3 Cost. -  Artt. 11 e 117, co. 1, Cost., in relazione all’art. 49, § 3, CDFUE
-
- 
 
 # Massime
 
@@ -48,8 +40,6 @@ Art. 3 Cost. - Art. 27, co. 3 Cost. -  Artt. 11 e 117, co. 1, Cost., in relazio
   valore confiscabile, trattandosi di valutazione che può essere operata al
   meglio dal solo legislatore e che, allo stato, non si rinviene neppure in altri
   settori dell’ordinamento.
-
-
 
 # Profili d’interesse
 
@@ -77,15 +67,11 @@ Art. 3 Cost. - Art. 27, co. 3 Cost. -  Artt. 11 e 117, co. 1, Cost., in relazio
 
 C. cost., *[sentenza 1° febbraio 2022, n. 28](https://giurcost.org/decisioni/2022/0028s-22.html?titolo=Sentenza%20n.%2028)*
 
-
-
 *Sulla necessaria sostituzione pretoria delle clausole sanzionatorie solo per prevenire vuoti di tutela*
 
 * C. cost., *[sentenza 5 dicembre 2018, n. 222](https://giurcost.org/decisioni/2018/0222s-18.html?titolo=Sentenza%20n.%20222)*
 * C. cost., *[sentenza 22 marzo 2024, n. 46](https://giurcost.org/decisioni/2024/0046s-24.html?titolo=Sentenza%20n.%20%2046)*
 * C. cost., *[sentenza 28 marzo 2024, n. 51](https://giurcost.org/decisioni/2024/0051s-24.html?titolo=Sentenza%20n.%2051)* 
-
-
 
 # Estratto della motivazione
 
@@ -145,7 +131,7 @@ e sovranazionale: e dunque con gli artt. 3 e 27, terzo comma, Cost., nonché –
 per ciò che concerne il diritto dell’Unione – con gli artt. 11 e 117, primo
 comma, Cost. in relazione all’art. 49, paragrafo 3, CDFUE. \[...]
 
-4. – \[...] Rispetto, tuttavia,
+**4. –** \[...] Rispetto, tuttavia,
 alla possibilità di una pronuncia che sostituisca l’attuale previsione della
 confisca obbligatoria di denaro o cose di valore equivalenti ai beni
 strumentali con una corrispondente confisca meramente facoltativa, questa Corte
@@ -189,33 +175,7 @@ obbligatoria del profitto, diretta o per equivalente, a carico di qualunque
 persona – fisica o giuridica – che risulti avere effettivamente conseguito le
 utilità derivanti dal reato. \[...]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5.– Dal momento, poi, che il *vulnus* riscontrato
+**5.–** Dal momento, poi, che il *vulnus* riscontrato
 investe allo stesso modo, ed esattamente per le medesime ragioni, la previsione
 della confisca diretta dei beni utilizzati per commettere il reato,
 disciplinata dal primo comma della medesima disposizione, la presente
