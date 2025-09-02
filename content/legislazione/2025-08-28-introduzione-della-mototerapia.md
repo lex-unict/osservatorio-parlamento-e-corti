@@ -18,8 +18,6 @@ Salute
 
 Riconoscimento della mototerapia come terapia complementare *\[art. 1]*.
 
-
-
 # Iniziativa
 
 Parlamentare
@@ -34,6 +32,5 @@ Parlamentare
 
 # Durata dell’esame parlamentare
 
-Dal 13 ottobre 2022 al 20 novembre 2024
-
+Dal 13 ottobre 2022 al 20 novembre 2024 \
 (2 anni, 1 mese, 8 giorni)
