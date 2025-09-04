@@ -45,15 +45,25 @@
 
                     <div class="search-row">
                         <div class="search-field search-date">
-                            <label for="date-from">Da:</label>
+                            <label for="date-from">Pubblicazione dal:</label>
                             <input type="date" id="date-from" class="form-control">
                         </div>
                         
                         <div class="search-field search-date">
-                            <label for="date-to">A:</label>
+                            <label for="date-to">Al:</label>
                             <input type="date" id="date-to" class="form-control">
                         </div>
+
+                        <div class="search-field search-date">
+                            <label for="act-date-from">Atto dal:</label>
+                            <input type="date" id="act-date-from" class="form-control">
+                        </div>
                         
+                        <div class="search-field search-date">
+                            <label for="act-date-to">Al:</label>
+                            <input type="date" id="act-date-to" class="form-control">
+                        </div>
+
                         <div class="search-field search-button">
                             <button type="button" id="search-button" class="button alt">Cerca</button>
                         </div>
@@ -82,6 +92,7 @@
             description: {{ .Description }},
             permalink: {{ .Permalink }},
             date: {{ .Date.Format "2006-01-02" }},
+            act_date: {{ .Params.act_date.Format "2006-01-02" }},
             categories: {{ if .Params.categories }}{{ .Params.categories }}{{ else }}[]{{ end }},
             section: {{ .Section }},
             section_title: {{ .Section | humanize }}
@@ -104,6 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const sectionFilter = document.getElementById('section-filter');
     const dateFrom = document.getElementById('date-from');
     const dateTo = document.getElementById('date-to');
+    const actDateFrom = document.getElementById('act-date-from');
+    const actDateTo = document.getElementById('act-date-to');
 
     // Configure Fuse.js options
     const fuseOptions = {
@@ -182,18 +195,24 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionFilter.value = params.get('section') || '';
         dateFrom.value = params.get('from') || '';
         dateTo.value = params.get('to') || '';
+        actDateFrom.value = params.get('act_from') || '';
+        actDateTo.value = params.get('act_to') || '';
 
         // Set default dates if not in URL
         if (!dateFrom.value) dateFrom.valueAsDate = sixMonthsAgo;
         if (!dateTo.value) dateTo.valueAsDate = today;
+        if (!actDateFrom.value) actDateFrom.valueAsDate = sixMonthsAgo;
+        if (!actDateTo.value) actDateTo.valueAsDate = today;
 
-        return {
-            query: searchQuery.value,
-            categories: getSelectedCategories(),
-            section: sectionFilter.value,
-            dateFrom: dateFrom.value,
-            dateTo: dateTo.value
-        };
+                    return {
+                query: searchQuery.value,
+                categories: getSelectedCategories(),
+                section: sectionFilter.value,
+                dateFrom: dateFrom.value,
+                dateTo: dateTo.value,
+                actDateFrom: actDateFrom.value,
+                actDateTo: actDateTo.value
+            };
     }
 
     // Function to get selected categories
@@ -227,6 +246,8 @@ document.addEventListener('DOMContentLoaded', function() {
         url.searchParams.delete('section');
         url.searchParams.delete('from');
         url.searchParams.delete('to');
+        url.searchParams.delete('act_from');
+        url.searchParams.delete('act_to');
 
         // Add new parameters if they have values
         if (params.query) url.searchParams.set('q', params.query);
@@ -234,6 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (params.section) url.searchParams.set('section', params.section);
         if (params.dateFrom) url.searchParams.set('from', params.dateFrom);
         if (params.dateTo) url.searchParams.set('to', params.dateTo);
+        if (params.actDateFrom) url.searchParams.set('act_from', params.actDateFrom);
+        if (params.actDateTo) url.searchParams.set('act_to', params.actDateTo);
 
         // Update URL without reloading the page
         window.history.pushState({}, '', url);
@@ -245,8 +268,12 @@ document.addEventListener('DOMContentLoaded', function() {
             categories: getSelectedCategories(),
             section: sectionFilter.value,
             dateFrom: dateFrom.value,
-            dateTo: dateTo.value
+            dateTo: dateTo.value,
+            actDateFrom: actDateFrom.value,
+            actDateTo: actDateTo.value
         };
+
+        console.log({performSearch: params});
 
         // Update URL if flag is true
         if (updateUrlFlag) {
@@ -291,6 +318,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 matches = false;
             }
 
+            if (params.actDateFrom && item.act_date && item.act_date < params.actDateFrom) {
+                matches = false;
+            }
+
+            if (params.actDateTo && item.act_date && item.act_date > params.actDateTo) {
+                matches = false;
+            }
+
             return matches;
         });
 
@@ -317,18 +352,28 @@ document.addEventListener('DOMContentLoaded', function() {
         let html = '<div class="row">';
         results.forEach(result => {
             const categories = Array.isArray(result.categories) ? result.categories : [];
-            const date = new Date(result.date).toLocaleDateString('it-IT', {
+            const pubDate = new Date(result.date).toLocaleDateString('it-IT', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
             });
+            
+            const actDate = result.act_date ? new Date(result.act_date).toLocaleDateString('it-IT', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }) : null;
             
             html += `
                 <div class="col-12">
                     <article class="box">
                         <header>
                             <h3><a href="${result.permalink}">${result.title}</a></h3>
-                            <p class="meta">Data: ${date} | Sezione: <a href="/${result.section}">${result.section_title}</a></p>
+                            <p class="meta">
+                                Data di pubblicazione: ${pubDate} 
+                                ${actDate ? `| Data dell'atto: ${actDate}` : ''} 
+                                | Sezione: <a href="/${result.section}">${result.section_title}</a>
+                            </p>
                         </header>
                         <p>${result.description || ''}</p>
                         ${categories.length > 0 ? 
