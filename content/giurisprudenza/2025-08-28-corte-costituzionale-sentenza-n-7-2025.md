@@ -1,5 +1,6 @@
 ---
 title: Corte costituzionale - Sentenza n. 7/2025
+act_date: 2025-02-04T10:15:00.000+01:00
 date: 2025-08-28T23:07:00.000+02:00
 description: Dep. 4 febbraio 2025
 pdf: /images/uploads/giur.-04.02.2025.pdf
