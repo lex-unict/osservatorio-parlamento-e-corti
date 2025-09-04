@@ -18,4 +18,13 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - hugo 
+      - hugo
+
+  decap:
+    image: node:alpine
+    volumes:
+      - .:/src
+    working_dir: /src
+    ports:
+      - "8081:8081"
+    command: npx decap-server
