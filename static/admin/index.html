@@ -38,6 +38,258 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       CMS.registerPreviewStyle("/admin/preview.css");
+
+      // Function to get all unique categories from the CMS
+      async function getAllCategories() {
+        try {
+          const collections = await CMS.getBackend().listAllEntries();
+          const categories = new Set();
+          
+          collections.forEach(collection => {
+            collection.data.forEach(entry => {
+              if (entry.data.categories) {
+                const cats = Array.isArray(entry.data.categories) ? 
+                           entry.data.categories : 
+                           [entry.data.categories];
+                cats.forEach(cat => {
+                  if (cat && typeof cat === 'string') {
+                    categories.add(cat.trim());
+                  }
+                });
+              }
+            });
+          });
+          
+          return Array.from(categories).sort();
+        } catch (error) {
+          console.error('Error fetching categories:', error);
+          return [];
+        }
+      }
+
+      // Register custom categories widget
+      const CategoryWidget = createClass({
+        getInitialState: function() {
+          return {
+            inputValue: '',
+            suggestions: [],
+            allCategories: [],
+            showSuggestions: false,
+            selectedIndex: -1
+          };
+        },
+
+        async componentDidMount() {
+          const categories = await getAllCategories();
+          this.setState({ allCategories: categories });
+        },
+
+        handleInputChange: function(e) {
+          const inputValue = e.target.value;
+          const suggestions = this.getSuggestions(inputValue);
+          
+          this.setState({
+            inputValue,
+            suggestions,
+            showSuggestions: true,
+            selectedIndex: -1
+          });
+        },
+
+        getSuggestions: function(input) {
+          const inputValue = input.trim().toLowerCase();
+          if (!inputValue) return [];
+          
+          // Filter out categories that are already selected
+          const currentCategories = new Set(this.props.value || []);
+          
+          return this.state.allCategories
+            .filter(category => 
+              !currentCategories.has(category) &&
+              category.toLowerCase().includes(inputValue)
+            )
+            .slice(0, 5); // Limit to 5 suggestions
+        },
+
+        handleKeyDown: function(e) {
+          const { suggestions, selectedIndex, inputValue } = this.state;
+          
+          switch(e.key) {
+            case 'ArrowDown':
+              e.preventDefault();
+              this.setState({
+                selectedIndex: Math.min(selectedIndex + 1, suggestions.length - 1),
+                showSuggestions: true
+              });
+              break;
+              
+            case 'ArrowUp':
+              e.preventDefault();
+              this.setState({
+                selectedIndex: Math.max(selectedIndex - 1, -1)
+              });
+              break;
+              
+            case 'Enter':
+              e.preventDefault();
+              if (selectedIndex >= 0 && suggestions[selectedIndex]) {
+                this.addCategory(suggestions[selectedIndex]);
+              } else if (inputValue.trim()) {
+                this.addCategory(inputValue.trim());
+              }
+              break;
+              
+            case 'Escape':
+              this.setState({
+                showSuggestions: false,
+                selectedIndex: -1
+              });
+              break;
+          }
+        },
+
+        addCategory: function(category) {
+          const newValue = this.props.value ? [...this.props.value, category] : [category];
+          this.props.onChange(newValue);
+          this.setState({
+            inputValue: '',
+            showSuggestions: false,
+            selectedIndex: -1
+          });
+        },
+
+        handleRemove: function(index) {
+          const newValue = this.props.value.filter((_, i) => i !== index);
+          this.props.onChange(newValue);
+        },
+
+        handleSuggestionClick: function(suggestion) {
+          this.addCategory(suggestion);
+        },
+
+        handleBlur: function() {
+          // Delay hiding suggestions to allow click events to fire
+          setTimeout(() => {
+            this.setState({ showSuggestions: false });
+          }, 200);
+        },
+
+        render: function() {
+          const value = this.props.value || [];
+          const { inputValue, suggestions, showSuggestions, selectedIndex } = this.state;
+
+          return h('div', {},
+            h('div', { className: 'categories-input' },
+              h('input', {
+                type: 'text',
+                value: inputValue,
+                placeholder: 'Aggiungi categoria e premi Enter',
+                onChange: this.handleInputChange,
+                onKeyDown: this.handleKeyDown,
+                onBlur: this.handleBlur,
+                className: 'category-text-input'
+              }),
+              showSuggestions && suggestions.length > 0 && h('div', { className: 'suggestions-list' },
+                suggestions.map((suggestion, index) =>
+                  h('div', {
+                    key: suggestion,
+                    className: `suggestion-item${index === selectedIndex ? ' selected' : ''}`,
+                    onClick: () => this.handleSuggestionClick(suggestion),
+                    onMouseDown: (e) => e.preventDefault() // Prevent input blur
+                  }, suggestion)
+                )
+              )
+            ),
+            h('div', { className: 'categories-list' },
+              value.map((category, index) =>
+                h('span', { key: index, className: 'category-tag' },
+                  category,
+                  h('button', {
+                    onClick: () => this.handleRemove(index),
+                    className: 'remove-category',
+                    type: 'button'
+                  }, '×')
+                )
+              )
+            )
+          );
+        }
+      });
+
+      CMS.registerWidget('categories', CategoryWidget);
     </script>
+    <style>
+      .categories-input {
+        margin-bottom: 1rem;
+      }
+
+      .category-text-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #dfdfe3;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      .categories-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .category-tag {
+        display: inline-flex;
+        align-items: center;
+        background-color: #f0f0f2;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      .remove-category {
+        background: none;
+        border: none;
+        color: #666;
+        margin-left: 6px;
+        padding: 0 4px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      .remove-category:hover {
+        color: #ff4d4d;
+      }
+
+      .suggestions-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #dfdfe3;
+        border-radius: 4px;
+        margin-top: 2px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .suggestion-item {
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      .suggestion-item:hover,
+      .suggestion-item.selected {
+        background-color: #f0f0f2;
+      }
+
+      .categories-input {
+        position: relative;
+      }
+    </style>
   </body>
 </html>
