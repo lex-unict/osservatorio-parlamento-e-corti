@@ -50,7 +50,17 @@ Art. 3 Cost. - Art. 27, co. 3 Cost. -  Artt. 11 e 117, co. 1, Cost., in relazio
 * C. cost., ***[sentenza 28 marzo 2024, n. 51](https://giurcost.org/decisioni/2024/0051s-24.html?titolo=Sentenza%20n.%2051)*** 
 
 # **Estratto della motivazione**
-
+\
+\
+\
+.
+\
+\
+\
+\
+\
+\
+\
 **3.1.4.**– Dalla riconosciuta natura di pena delle confische tanto dei «beni utilizzati per commettere il reato» (art. 2641, primo comma, cod. civ.), quanto del «denaro o beni di valore equivalente» a tali beni (art. 2641, secondo comma, cod. civ.), deriva il loro necessario assoggettamento all’insieme dei principi e delle garanzie che governano la previsione legislativa, l’applicazione e l’esecuzione delle pene.
 
 Tra tali principi, viene qui in considerazione la necessità che la pena non costituisca una reazione sproporzionata rispetto alla gravità del reato \[...].
