@@ -61,4 +61,4 @@ Esso  intende offrire ai giuristi materiali e spunti utili a monitorare ed anali
 
 **Prof. Samuele Gherardi** (Universidad Complutense de Madrid), **Dott.ssa Alessia Fonzi** (Università dell'Aquila), **[Dott.ssa Nannerel Fiano](https://www.unimi.it/it/ugov/person/nannerel-fiano)** (Università di Milano), **[Dott. Antonello Lo Calzo](https://www.unipi.it/ateneo/organizzazione/persone/antonello-lo-calzo-128328/)** (Università di Pisa), **[Dott.ssa Chiara Sagone](https://www.lex.unict.it/assegnisti-di-ricerca/chiara.sagone)** (Università di Catania), **Dott.ssa Ilaria De Cesare** (Università di Pavia), **[Dott. Vittorio Fazio](https://www.lex.unict.it/dottorando/vittorio.fazio)** (Università di Catania), **[Dott. Paolo Inturri](https://www.lex.unict.it/dottorando/paolo.inturri)** (Università di Catania)
 
-![](/images/uploads/logo-piaceri.jpg)<https://www.unict.it/it/ricerca/piano-di-incentivi-la-ricerca-di-ateneo-20202022>
+[![](/images/uploads/logo-piaceri.jpg)](https://www.unict.it/it/ricerca/piano-di-incentivi-la-ricerca-di-ateneo-20202022)
