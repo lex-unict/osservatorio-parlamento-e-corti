@@ -92,7 +92,7 @@
             description: {{ .Description }},
             permalink: {{ .Permalink }},
             date: {{ .Date.Format "2006-01-02" }},
-            act_date: {{ .Params.act_date.Format "2006-01-02" }},
+            act_date: {{ if and .Params.act_date (ne .Params.act_date "") }}{{ .Params.act_date }}{{ else }}""{{ end }},
             categories: {{ if .Params.categories }}{{ .Params.categories }}{{ else }}[]{{ end }},
             section: {{ .Section }},
             section_title: {{ .Section | humanize }}
