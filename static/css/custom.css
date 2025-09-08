@@ -144,7 +144,6 @@ h2, h3, h4, h5, h6,
 
 .article-content p {
     margin: 1rem 0;
-    white-space: pre-line;
 }
 
 .article-attachments {
@@ -452,10 +451,6 @@ footer h4 {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.contact-logo img {
-    max-width: 150px;
 }
 
 .copyright {
